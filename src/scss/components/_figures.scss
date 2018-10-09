@@ -1,0 +1,154 @@
+//
+// Figure
+//
+// Styleguide Figure
+//
+
+
+//
+// Layout
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <p class="text-center"><b>Vertical (default)</b></p>
+//         <figure class="figure">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/figure-example-1.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-6">
+//         <p class="text-center"><b>Horizontal</b></p>
+//         <figure class="figure figure--horizontal">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/figure-example-2.jpg">
+//         </figure>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Figure.Layout
+//
+
+
+//
+// Padding
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <p class="text-center"><b>Compressed</b></p>
+//         <figure class="figure figure--bordered figure--compressed">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida.</div>
+//             </figcaption>
+//             <img src="public/img/figure-example-3.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-4">
+//         <p class="text-center"><b>Regular (default)</b></p>
+//         <figure class="figure figure--bordered figure--regular">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida.</div>
+//             </figcaption>
+//             <img src="public/img/figure-example-3.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-4">
+//         <p class="text-center"><b>Loose</b></p>
+//         <figure class="figure figure--bordered figure--loose">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida.</div>
+//             </figcaption>
+//             <img src="public/img/figure-example-3.jpg">
+//         </figure>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Figure.Padding
+//
+
+
+//
+// Highlight
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">Add a `figure--highlight` class to highlight to your caption.</div>
+// </div>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <figure class="figure figure--highlight">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/figure-example-4.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-6">
+//         <figure class="figure figure--horizontal figure--highlight">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/figure-example-4.jpg">
+//         </figure>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Figure.Highlight
+//
+
+@mixin figure-spacing($spacing: $base-spacing-regular) {
+    margin: 0 0 ($spacing * 0.5) 0;
+    padding: $spacing;
+
+    img + figcaption,
+    figcaption + img {
+        margin: ($spacing * 0.5) 0 0 0;
+    }
+
+    &--horizontal img {
+        margin: 0 0 0 ($spacing * 0.5);
+    }
+}
+
+.figure {
+
+    @include figure-spacing();
+
+    &--horizontal {
+        display: flex;
+        flex-direction: row;
+
+        img {
+            max-width: 50%;
+            align-self: flex-start;
+        }
+    }
+
+    &--compressed   { @include figure-spacing($base-spacing-compressed); }
+    &--regular      { @include figure-spacing($base-spacing-regular); }
+    &--loose        { @include figure-spacing($base-spacing-loose); }
+
+    &--bordered {
+        border: $base-border;
+    }
+
+    &--highlight {
+        figcaption {
+            padding-left: $base-spacing-half;
+            border-left: $base-figure-highlight-width solid $base-accent-color;
+        }
+    }
+}

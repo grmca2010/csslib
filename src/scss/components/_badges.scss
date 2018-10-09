@@ -1,0 +1,272 @@
+//
+// Badge
+//
+// Styleguide.Badge
+//
+
+
+//
+// Color
+//
+// Markup:
+// <div class="section">
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--info badge--small">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--success">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--warning">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--warning-alt">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--danger">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--blue">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--dkgray">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--vibblue">7</span>
+//         </span>
+//     </span>
+//     <span class="base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--indigo">7</span>
+//         </span>
+//     </span>
+//     <span class="badge-wrapper">
+//         <span class="icon-alert icon-medium"></span>
+//         <span class="badge badge--small badge--ghost badge--bordered-alt">7</span>
+//     </span>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Badge.Color
+//
+
+
+//
+// Examples
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">Badges should be used on Thumbnail and Icon patterns only.</div>
+// </div>
+//
+// Markup:
+// <div class="section">
+//     <span class="badge-wrapper base-margin-right">
+//         <img class="thumb thumb--small thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--tiny badge--danger badge--bordered-alt">3</span>
+//     </span>
+//     <span class="badge-wrapper base-margin-right">
+//         <img class="thumb thumb--medium thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--small badge--danger badge--bordered-alt">3</span>
+//     </span>
+//     <span class="badge-wrapper base-margin-right">
+//         <img class="thumb thumb--large thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--medium badge--danger badge--bordered-alt">3</span>
+//     </span>
+//     <span class="badge-wrapper">
+//         <img class="thumb thumb--xlarge thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--large badge--danger badge--bordered-alt">3</span>
+//     </span>
+// </div>
+// <div class="section">
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--tiny badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--small badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--medium badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--large badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+// </div>
+// <div class="section">
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--tiny badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--medium badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+//     <a class="link">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--large badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+// </div>
+// <div class="section">
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-large"></span>
+//             <span class="badge badge--medium badge--success badge--bordered-alt">3</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--success badge--bordered-alt">3</span>
+//         </span>
+//     </a>
+//     <a class="link">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-small"></span>
+//             <span class="badge badge--tiny badge--success badge--bordered-alt">3</span>
+//         </span>
+//     </a>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Badge.Examples
+//
+
+$icon-sizes:    ("small", 27px),
+                ("medium", 42px),
+                ("large", 84px);
+
+$thumb-sizes:   ("small", $small-thumbnail-size),
+                ("medium", $medium-thumbnail-size),
+                ("large", $large-thumbnail-size),
+                ("xlarge", $xlarge-thumbnail-size),
+                ("huge", $huge-thumbnail-size),
+                ("goliath", $goliath-thumbnail-size);
+
+.badge-wrapper {
+
+    position: relative;
+    display: inline-block;
+
+    .badge {
+
+        position: absolute;
+        display: inline-flex;
+        border-radius: $base-button-border-radius;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 10;
+
+        // Defaults
+        @include label-color();
+        @include label-size($height: $cui-badge-size, $width: $cui-badge-size, $font-size: $cui-badge-font-size, $padding: 0);
+
+        @each $badge-name, $badge-color, $badge-background, $badge-border in $badge-colors {
+            &--#{$badge-name} {
+                @include label-color($background: $badge-background, $color: $badge-color, $border: $badge-border);
+            }
+        }
+
+        @each $badge-name, $badge-size, $badge-font-size in $badge-sizes {
+            &--#{$badge-name} {
+                @include label-size($height: $badge-size, $width: $badge-size, $font-size: $badge-font-size, $padding: 0);
+            }
+        }
+
+        &--bordered {
+            border: $base-border;
+            border-width: 2px;
+        }
+        &--bordered-alt {
+            border: $base-border-alt;
+            border-width: 2px;
+        }
+    }
+
+    // Icons with badges
+    span[class^="icon-"] + .badge {
+        top: ($default-icon-font-size / 2) - ($cui-badge-size / 2);
+        right: -($default-icon-font-size / 2);
+    }
+
+    @each $icon-name, $icon-size in $icon-sizes {
+        @each $badge-name, $badge-size in $badge-sizes {
+            span[class^="icon-"].icon-#{$icon-name} + .badge.badge--#{$badge-name} {
+                top: ($icon-size / 2) - ($badge-size / 2);
+                right: -($badge-size / 2);
+            }
+        }
+    }
+
+    // Thumbnails with badges
+    .thumb + .badge {
+        top: ($default-thumbnail-size / 2) - ($cui-badge-size / 2);
+        right: -($cui-badge-size / 2);
+    }
+
+    @each $thumb-name, $thumb-size in $thumb-sizes {
+        @each $badge-name, $badge-size in $badge-sizes {
+            .thumb.thumb--#{$thumb-name} + .badge.badge--#{$badge-name} {
+                top: ($thumb-size / 2) - ($badge-size / 2);
+                right: -($badge-size / 2);
+            }
+        }
+    }
+}

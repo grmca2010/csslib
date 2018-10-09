@@ -1,0 +1,780 @@
+//
+// Button
+//
+// sketch
+//
+// Styleguide Button
+//
+
+
+//
+// Size
+//
+// Markup:
+// <button class="btn btn--small">Small</button>
+// <button class="btn">Default</button>
+// <button class="btn btn--wide">Wide</button>
+//
+// Weight: 1
+//
+// Styleguide Button.Size
+//
+
+
+//
+// Color
+//
+// Markup:
+// <button class="btn">Default</button>
+// <button class="btn btn--primary">Primary</button>
+// <button class="btn btn--secondary">Secondary</button>
+// <button class="btn btn--negative">Negative</button>
+// <button class="btn btn--success">Success</button>
+// <button class="btn btn--gray-ghost">Gray Ghost</button>
+// <button class="btn btn--white">White</button>
+// <button class="btn btn--white-ghost">White Ghost</button>
+//
+// Weight: 2
+//
+// Styleguide Button.Color
+//
+
+
+//
+// Disabled
+//
+// Markup:
+// <button class="btn disabled">Default</button>
+// <button class="btn btn--primary disabled">Primary</button>
+// <button class="btn btn--secondary disabled">Secondary</button>
+// <button class="btn btn--negative disabled">Negative</button>
+// <button class="btn btn--success disabled">Success</button>
+// <button class="btn btn--gray-ghost disabled">Gray Ghost</button>
+// <button class="btn btn--white disabled">White</button>
+// <button class="btn btn--white-ghost disabled">White Ghost</button>
+//
+// Weight: 3
+//
+// Styleguide Button.Disabled
+//
+
+
+//
+// Allowed Backgrounds
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">Use this guide to determine which buttons can be used on which backgrounds.</div>
+// </div>
+//
+// Markup:
+// <div class="row no-gutters">
+//     <div class="col-md-3 panel panel--bordered text-center">
+//        <h3>White BG</h3><br>
+//        <div><button class="btn">Default</button></div><br>
+//        <div><button class="btn btn--primary">Primary</button></div><br>
+//        <div><button class="btn btn--secondary">Secondary</button></div><br>
+//        <div><button class="btn btn--negative">Negative</button></div><br>
+//        <div><button class="btn btn--success">Success</button></div><br>
+//        <div><button class="btn btn--gray-ghost">Gray Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-3 panel panel--ltgray text-center">
+//        <h3>Light Gray BG</h3><br>
+//        <div><button class="btn">Default</button></div><br>
+//        <div><button class="btn btn--primary">Primary</button></div><br>
+//        <div><button class="btn btn--secondary">Secondary</button></div><br>
+//        <div><button class="btn btn--negative">Negative</button></div><br>
+//        <div><button class="btn btn--success">Success</button></div><br>
+//        <div><button class="btn btn--gray-ghost">Gray Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-3 panel panel--mdgray text-center">
+//        <h3>Medium Gray BG</h3><br>
+//        <div><button class="btn">Default</button></div><br>
+//        <div><button class="btn btn--primary">Primary</button></div><br>
+//        <div><button class="btn btn--secondary">Secondary</button></div><br>
+//        <div><button class="btn btn--negative">Negative</button></div><br>
+//        <div><button class="btn btn--success">Success</button></div><br>
+//     </div>
+//     <div class="col-md-3 panel panel--dkgray text-center">
+//        <h3>Dark Gray BG</h3><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-3 panel panel--blue text-center">
+//        <h3>Blue BG</h3><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//     </div>
+//     <div class="col-md-3 panel panel--vibblue text-center">
+//        <h3>Vibrant Blue BG</h3><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-3 panel panel--indigo text-center">
+//        <h3>Indigo BG</h3><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Button.Backgrounds
+//
+
+
+//
+// Button Icons
+//
+// Markup:
+// <h6>Small</h6>
+// <div class="base-margin-top">
+//     <button class="btn btn--icon btn--small"><span class="icon-tools"></span></button>
+//     <button class="btn btn--icon btn--small btn--primary"><span class="icon-bookmark"></span></button>
+//     <button class="btn btn--icon btn--small btn--secondary"><span class="icon-analysis"></span></button>
+//     <button class="btn btn--icon btn--small btn--negative"><span class="icon-power"></span></button>
+//     <button class="btn btn--icon btn--small btn--success"><span class="icon-check"></span></button>
+// </div>
+// <br>
+// <h6>Default</h6>
+// <div class="base-margin-top">
+//     <button class="btn btn--icon"><span class="icon-tools"></span></button>
+//     <button class="btn btn--icon btn--primary"><span class="icon-bookmark"></span></button>
+//     <button class="btn btn--icon btn--secondary"><span class="icon-analysis"></span></button>
+//     <button class="btn btn--icon btn--negative"><span class="icon-power"></span></button>
+//     <button class="btn btn--icon btn--success"><span class="icon-check"></span></button>
+// </div>
+// <br>
+// <h6>Large</h6>
+// <div class="base-margin-top">
+//     <button class="btn btn--icon btn--large"><span class="icon-tools"></span></button>
+//     <button class="btn btn--icon btn--large btn--primary"><span class="icon-bookmark"></span></button>
+//     <button class="btn btn--icon btn--large btn--secondary"><span class="icon-analysis"></span></button>
+//     <button class="btn btn--icon btn--large btn--negative"><span class="icon-power"></span></button>
+//     <button class="btn btn--icon btn--large btn--success"><span class="icon-check"></span></button>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Button.Icon
+//
+
+a.btn,
+a.btn.btn--icon,
+a.btn.btn--icon.btn--small {
+    // Fixes issue where anchors used as button elements not properly aligned
+    // However, button elements themselves cannot be flex containers which means
+    // normal buttons have to use inline-block versus inline-flex :-(
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn + .btn {
+    margin-left: $aui-button-margin;
+}
+
+.btn.small + .btn.small {
+    margin-left: $aui-small-button-margin;
+}
+
+.btn {
+    @include btn-size();
+    @include btn-color();
+
+    &.btn--small {
+        @include btn-size(
+            $padding: $aui-small-button-padding,
+            $font-size: $aui-small-button-font-size,
+            $line-height: $aui-small-button-line-height,
+            $min-width: $aui-small-button-min-width,
+            $max-width: $aui-small-button-max-width,
+            $height: $aui-small-button-height
+        );
+    }
+    &.btn--wide {
+        padding-left: $base-spacing * 3;
+        padding-right: $base-spacing * 3;
+        max-width: $aui-button-max-width;
+    }
+
+    // Generate the button colors from the global variables
+    @each $button-obj in $button-colors {
+        @if map-get($button-obj, name) == "default" {
+            @include btn-color(map-get($button-obj, params)...);
+        } @else {
+            &.btn--#{map-get($button-obj, name)} {
+                @include btn-color(map-get($button-obj, params)...);
+            }
+        }
+    }
+    &.btn--square {
+        border-radius: 0;
+    }
+    &.btn--icon {
+        border-width: 1px;
+        overflow: visible; // To allow for subtext
+        position: relative;
+
+        @include btn-size(
+            $height: $aui-button-icon-height,
+            $line-height: $aui-button-icon-font-size,
+            $min-width: $aui-button-icon-width,
+            $max-width: $aui-button-icon-width,
+            $font-size: $aui-button-icon-font-size,
+            $padding: 0
+        );
+
+        > span[class^="icon-"] {
+            font-size: $aui-button-icon-font-size;
+        }
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &.btn--small {
+            @include btn-size(
+                $height: $aui-small-button-icon-height,
+                $line-height: $aui-small-button-icon-font-size,
+                $min-width: $aui-small-button-icon-width,
+                $max-width: $aui-small-button-icon-width,
+                $font-size: $aui-small-button-icon-font-size,
+                $padding: 0
+            );
+        }
+        &.btn--large {
+            @include btn-size(
+                $height: $aui-large-button-icon-height,
+                $line-height: $aui-large-button-icon-font-size,
+                $min-width: $aui-large-button-icon-width,
+                $max-width: $aui-large-button-icon-width,
+                $font-size: $aui-large-button-icon-font-size,
+                $padding: 0
+            );
+        }
+
+        .btn__subtext {
+            color: $med-gray-2;
+            font-size: $xsmall-font-size;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: $aui-button-icon-height + ($base-spacing * 0.25);
+            margin: 0;
+        }
+    }
+}
+
+
+//
+// Button Dropdowns
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">Wrap a button in a `dropdown` container to add a simple button dropdown menu. <br>Add the class `active` to toggle the menu.</div>
+// </div>
+//
+// Markup:
+// <div class="dropdown">
+//     <button class="btn btn--small btn--dropdown">Small Button</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--dropdown">Default Button</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--dropdown">Open Right</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--dropdown">Open Left</button>
+//     <div class="dropdown__menu dropdown__menu--openleft">
+//         <a>Action One</a></li>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--dropdown">Selected</button>
+//     <div class="dropdown__menu">
+//         <a class="selected">Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--dropdown">With Divider</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <div class="dropdown__divider"></div>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Button.Dropdown
+//
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+
+    &__menu {
+        @include list--unstyled;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        background: $white;
+        border: $base-border;
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+        list-style: none;
+        position: absolute;
+        pointer-events: auto;
+        top: calc(100% - 1px);
+        width: 100%;
+        transform: translateY(-2em);
+    	text-align: left;
+    	box-shadow: $base-dropdown-box-shadow;
+        font-weight: normal;
+
+        &__divider {
+            height: 1px;
+            overflow: hidden;
+            background-color: $base-border-color;
+        }
+
+        a, .dropdown__group-header {
+            height: $base-dropdown-menu-item-height;
+            line-height: $base-dropdown-menu-item-height;
+            display: inline-flex;
+            color: $base-font-color !important;
+            padding: 0 40px 0 ($base-spacing * 0.5);
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .dropdown__group-header {
+            pointer-events: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: $base-border;
+        }
+
+        a {
+            .checkbox {
+                margin-right: $base-spacing-half;
+            }
+
+            &.selected {
+                color: $base-dropdown-menu-selected-color !important;
+                background-color: $base-dropdown-menu-selected-background;
+
+                &:after {
+                    @include icon-check;
+                    position: absolute;
+                    right: $base-spacing * 0.5;
+                    font-weight: bold;
+                }
+                &:hover {
+                    color: $base-dropdown-menu-selected-color;
+                    background-color: $base-dropdown-menu-selected-background;
+                }
+            }
+
+            &:hover {
+                color: $base-dropdown-menu-hover-color;
+                background-color: $base-dropdown-menu-hover-background;
+                text-decoration: none !important;
+            }
+    	}
+    }
+
+    &.active {
+        .dropdown__menu {
+            visibility: visible;
+            opacity: 1;
+            z-index: $base-dropdown-zindex;
+            transform: translateY(0%);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .btn.btn--dropdown {
+            &:after {
+                @include drawer-opened;
+            }
+        }
+    }
+
+    .btn ~ .dropdown__menu {
+        left: 0;
+        margin-top: $base-spacing-qtr;
+        min-width: $base-dropdown-menu-minwidth;
+        max-width: $base-dropdown-menu-maxwidth;
+    }
+    .btn ~ .dropdown__menu.dropdown__menu--openleft {
+        left: unset;
+        right: 0; // Open left
+    }
+
+    .btn.btn--dropdown {
+        &:after {
+            @include drawer-closed;
+            font-size: 80%;
+            display: inline-flex;
+            margin-left: $base-spacing-qtr;
+            color: inherit;
+            text-align: center;
+        }
+    }
+}
+
+
+// Dropdown divider and menu are used by both button and select dropdowns
+.dropdown__divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: $base-border-color;
+}
+
+.dropdown__menu:focus {
+    outline: none;
+}
+
+
+
+
+
+//
+// Button Groups
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">Wrap buttons in a `btn-group` container to create segmented button controls. <br>Add the class `selected` to indicate the selected option. <br>Add the class `disabled` to indicate a disabled option.</div>
+// </div>
+//
+// Markup:
+// <h6 class="section">Small</h6>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--small btn--gray-ghost selected">One</button>
+//             <button class="btn btn--small btn--gray-ghost">Two</button>
+//             <button class="btn btn--small btn--gray-ghost">Three</button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--small btn--primary-ghost">One</button>
+//             <button class="btn btn--small btn--primary-ghost selected">Two</button>
+//             <button class="btn btn--small btn--primary-ghost">Three</button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--small btn--gray-ghost">
+//                 <span class="icon-edit"></span>
+//             </button>
+//             <button class="btn btn--small btn--gray-ghost">
+//                 <span class="icon-transcript"></span>
+//             </button>
+//             <button class="btn btn--small btn--gray-ghost selected">
+//                 <span class="icon-text-size"></span>
+//             </button>
+//             <button class="btn btn--small btn--gray-ghost">
+//                 <span class="icon-zoom-in"></span>
+//             </button>
+//             <button class="btn btn--small btn--gray-ghost">
+//                 <span class="icon-zoom-out"></span>
+//             </button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--small btn--primary-ghost">
+//                 <span class="icon-edit"></span>
+//             </button>
+//             <button class="btn btn--small btn--primary-ghost">
+//                 <span class="icon-transcript"></span>
+//             </button>
+//             <button class="btn btn--small btn--primary-ghost">
+//                 <span class="icon-text-size"></span>
+//             </button>
+//             <button class="btn btn--small btn--primary-ghost selected">
+//                 <span class="icon-zoom-in"></span>
+//             </button>
+//             <button class="btn btn--small btn--primary-ghost">
+//                 <span class="icon-zoom-out"></span>
+//             </button>
+//         </div>
+//     </div>
+// </div>
+// <h6 class="section">Default</h6>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--gray-ghost selected">One</button>
+//             <button class="btn btn--gray-ghost">Two</button>
+//             <button class="btn btn--gray-ghost">Three</button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--primary-ghost">One</button>
+//             <button class="btn btn--primary-ghost selected">Two</button>
+//             <button class="btn btn--primary-ghost">Three</button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--gray-ghost">
+//                 <span class="icon-edit"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost">
+//                 <span class="icon-transcript"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost selected">
+//                 <span class="icon-text-size"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost">
+//                 <span class="icon-zoom-in"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost">
+//                 <span class="icon-zoom-out"></span>
+//             </button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group">
+//             <button class="btn btn--primary-ghost">
+//                 <span class="icon-edit"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost">
+//                 <span class="icon-transcript"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost">
+//                 <span class="icon-text-size"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost selected">
+//                 <span class="icon-zoom-in"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost">
+//                 <span class="icon-zoom-out"></span>
+//             </button>
+//         </div>
+//     </div>
+// </div>
+// <h6 class="section">Squared</h6>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="btn-group btn-group--square">
+//             <button class="btn btn--gray-ghost selected">One</button>
+//             <button class="btn btn--gray-ghost">Two</button>
+//             <button class="btn btn--gray-ghost disabled">Three</button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group btn-group--square">
+//             <button class="btn btn--primary-ghost">One</button>
+//             <button class="btn btn--primary-ghost selected">Two</button>
+//             <button class="btn btn--primary-ghost disabled">Three</button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group btn-group--square">
+//             <button class="btn btn--gray-ghost">
+//                 <span class="icon-edit"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost">
+//                 <span class="icon-transcript"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost selected">
+//                 <span class="icon-text-size"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost disabled">
+//                 <span class="icon-zoom-in"></span>
+//             </button>
+//             <button class="btn btn--gray-ghost">
+//                 <span class="icon-zoom-out"></span>
+//             </button>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="btn-group btn-group--square">
+//             <button class="btn btn--primary-ghost">
+//                 <span class="icon-edit"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost">
+//                 <span class="icon-transcript"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost">
+//                 <span class="icon-text-size"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost selected">
+//                 <span class="icon-zoom-in"></span>
+//             </button>
+//             <button class="btn btn--primary-ghost disabled">
+//                 <span class="icon-zoom-out"></span>
+//             </button>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 10
+//
+// Styleguide Button.Groups
+//
+
+.btns,
+.btn-group {
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn + .btn {
+        border-left: 1px solid transparent;
+        margin: 0;
+    }
+
+    &.btn-group--large {
+        .btn span[class^="icon-"] {
+            font-size: 20px;
+        }
+    }
+
+    > .dropdown .btn,
+    > .btn {
+        display: inline-flex;
+        padding: 0 $base-btn-group-padding;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        align-items: center;
+        justify-content: center;
+
+        @each $button-obj in $button-colors {
+            &--#{map-get($button-obj, name)} {
+                border: 1px solid map-get(map-get($button-obj, params), 'group-border-color');
+            }
+        }
+
+        &.toggled {
+            box-shadow: $base-btn-group-toggle-box-shadow;
+        }
+
+        &.toggled &.selected {
+            background: unset;
+        }
+
+        &:first-child {
+            padding-left: $base-btn-group-padding * 2;
+            border-top-left-radius: $base-button-border-radius;
+            border-bottom-left-radius: $base-button-border-radius;
+        }
+
+        &:last-child {
+            padding-right: $base-btn-group-padding * 2;
+            border-top-right-radius: $base-button-border-radius;
+            border-bottom-right-radius: $base-button-border-radius;
+        }
+
+        &:focus {
+            border: 1px solid transparent;
+        }
+    }
+
+    &--square > .dropdown .btn,
+    &--square > .btn {
+        &:first-child {
+            padding-left: $base-btn-group-padding;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        &:last-child {
+            padding-right: $base-btn-group-padding;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}
+
+.form-group + .divider,
+.btn-group + .divider {
+    border-top: none;
+    border-left: $base-border;
+    margin: 0 0 0 $base-spacing-half;
+    padding-right: $base-spacing-half;
+    height: 30px;
+}
+
+
+// Global Modifiers
+
+&.cui--compressed .btn {
+    @include btn-size(
+        $padding: $aui-small-button-padding,
+        $font-size: $aui-small-button-font-size,
+        $line-height: $aui-small-button-line-height,
+        $min-width: $aui-small-button-min-width,
+        $max-width: $aui-small-button-max-width,
+        $height: $aui-small-button-height
+    );
+}
+&.cui--compressed .btn.btn--icon {
+    @include btn-size(
+        $height: $aui-small-button-icon-height,
+        $line-height: $aui-small-button-icon-font-size,
+        $min-width: $aui-small-button-icon-width,
+        $max-width: $aui-small-button-icon-width,
+        $font-size: $aui-small-button-icon-font-size,
+        $padding: 0
+    );
+}
+&.cui--compressed .btn-group > .dropdown .btn,
+&.cui--compressed .btn-group > .btn {
+    padding: 0 $base-spacing-qtr;
+    &.selected {
+        transition: all ease 0.25s;
+    }
+}
+
+&.cui--animated .btn {
+    transition: box-shadow 0.1s linear;
+}
+&.cui--animated .dropdown.active {
+    .dropdown__menu {
+        transition: transform 0.2s;
+    }
+    .btn.btn--dropdown {
+        &:after {
+            transition: transform 0.2s;
+        }
+    }
+}
+&.cui--animated .btn.btn--dropdown {
+    &:after {
+        transition: transform 0.2s;
+    }
+}

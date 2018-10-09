@@ -1,0 +1,225 @@
+//
+// Grid
+//
+// Styleguide Grid
+//
+
+
+//
+// Basic Grid
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">The basic grid is the widely-used Bootstrap 12 column grid. It is a flexbox-based grid which you can use to build all sorts of layouts. It supports 5 breakpoints and many utility classes.</div>
+// </div>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 1</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 2</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 3</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 4</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 5</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 6</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 7</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 8</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 9</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 10</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 11</div>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="panel panel--bordered text-center">Column 12</div>
+//     </div>
+// </div>
+// <div class="section">
+//     <span>See <a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank">Bootstrap Grid</a> for more details.</span>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Grid.Basic
+//
+
+
+//
+// Advanced Grid
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">The advanced grid is a specialized container which provides more control over gutters and element selection.</div>
+// </div>
+//
+// Markup:
+// <div class="row base-margin-bottom">
+//     <div class="col-xl-6 flex-center-vertical">
+//         <div class="btn-group btn-group--square">
+//             <button id="grid-group" class="btn btn--gray-ghost">3up</button>
+//             <button id="grid-group" class="btn btn--gray-ghost">4up</button>
+//             <button id="grid-group" class="btn btn--gray-ghost selected">5up</button>
+//         </div>
+//     </div>
+//     <div class="col-xl-6 flex-center-vertical flex-right">
+//         <div class="form-group">
+//             <label class="switch">
+//                 <input id="grid-selectable" type="checkbox" checked>
+//                 <span class="switch__input"></span>
+//                 <span class="switch__label">Selectable</span>
+//             </label>
+//         </div>
+//         <div class="base-margin-left form-group label--inline">
+//             <div class="form-group__text">
+//                 <input id="grid-gutters" type="number" value="10">
+//                 <label for="grid-gutters">Gutters</label>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div id="grid" class="grid grid--selectable grid--5up">
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 1</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 2</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 3</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 4</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 5</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 6</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 7</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 8</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 9</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 10</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 11</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 12</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 13</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 14</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 15</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 14</div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="card__body">
+//             <div class="absolute-center text-uppercase">Card 15</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Grid.Dynamo
+//
+
+// 5 up (250px)
+// (250 * 5) + 40 - 1440
+
+// 4 up (300px)
+// (300 * 4) + 30 - 1440
+
+// 3 up (350px)
+// (350 * 3) + 20 - 1440
+
+// 2 up (500px)
+// (400 * 2) + 10
+
+.grid {
+
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: $cui-grid-gutter;
+
+    @each $grid-class, $grid-cols, $card-width in $cui-grid-card-sizes {
+        &.grid--#{$grid-class} {
+            grid-template-columns: repeat(auto-fill, minmax($card-width, 1fr));
+        }
+    }
+
+    &.grid--selectable {
+        > *:hover {
+            border: 1px solid $base-accent-color;
+            cursor: pointer;
+        }
+    }
+}

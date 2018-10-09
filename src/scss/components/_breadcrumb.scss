@@ -1,0 +1,50 @@
+//
+// Breadcrumb
+//
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <ul class="breadcrumb">
+//     <li><a>Previous Page</a></li>
+//     <li><a>Previous Page</a></li>
+//     <li><span>Current Page</span></li>
+// </ul>
+// <br><br>
+// <ul class="breadcrumb">
+//     <li><a><span class="icon-home"></span></a></li>
+//     <li><a>Devices</a></li>
+//     <li><span>Cisco Catalyst 3750E</span></li>
+// </ul>
+//
+//
+
+.breadcrumb {
+
+    @include clearfix;
+    @include list--unstyled;
+
+    margin: 0;
+    padding: 0;
+    background: 0 none;
+    display: inline-flex;
+
+    > li {
+        &.active {
+            color: $breadcrumb-color;
+        }
+
+        + li:before {
+            padding: $breadcrumb-padding;
+            color: $breadcrumb-color;
+            content: $breadcrumb-separator;
+        }
+
+        span[class^="icon-"] {
+            line-height: $base-font-size;
+        }
+    }
+}

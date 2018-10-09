@@ -1,0 +1,445 @@
+//
+// Card
+//
+// Styleguide Card
+//
+
+
+//
+// Basic
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">A Card is a container pattern similar to Panel. In fact, it is based on the Panel pattern inheriting the same properties. However, a Card has additional properties beyond the simple Panel.</div>
+// </div>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 col-xl-3">
+//         <div class="card">
+//             <div class="card__header">Header</div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">Footer</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Card.Basic
+//
+
+
+//
+// Raised
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">By default cards are flat. Add the class modifier `card--raised` to add a box shadow to your cards.</div>
+// </div>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 col-xl-3">
+//         <div class="subheader">Default</div>
+//         <div class="card">
+//             <div class="card__header">Header</div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">Footer</div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-xl-3">
+//         <div class="subheader">Raised</div>
+//         <div class="card card--raised">
+//             <div class="card__header">Header</div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">Footer</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Card.Raised
+//
+
+
+//
+// Title
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 col-xl-3">
+//         <div class="subheader">With Title</div>
+//         <div class="card">
+//             <div class="card__header">
+//                 <div class="card__header__title">Title</div>
+//             </div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">Footer</div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-xl-3">
+//         <div class="subheader">Title and Subtitle</div>
+//         <div class="card">
+//             <div class="card__header">
+//                 <div class="card__header__title">Title</div>
+//                 <div class="card__header__subtitle">Subtitle</div>
+//             </div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">Footer</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Card.Title
+//
+
+
+//
+// Actions
+//
+// <div class="alert">
+//     <div class="alert__icon icon-info-outline"></div>
+//     <div class="alert__message">Add actions specific to your card. Make sure to allow for sufficient horizontal space for your icons.</div>
+// </div>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 col-xl-3">
+//         <div class="subheader">With Actions</div>
+//         <div class="card">
+//             <div class="card__header">
+//                 <div class="card__header__title">Title</div>
+//                 <div class="card__header__subtitle">Subtitle</div>
+//             </div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-add"></span>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-edit"></span>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-trash"></span>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-xl-3">
+//         <div class="subheader">Actions with Labels</div>
+//         <div class="card">
+//             <div class="card__header">
+//                 <div class="card__header__title">Title</div>
+//                 <div class="card__header__subtitle">Subtitle</div>
+//             </div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-add"></span>
+//                         <div class="subtext">Add</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-edit"></span>
+//                         <div class="subtext">Edit</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-trash"></span>
+//                         <div class="subtext">Delete</div>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-xl-3">
+//         <div class="subheader">Action Overflow</div>
+//         <div class="card">
+//             <div class="card__header">
+//                 <div class="card__header__title">Title</div>
+//                 <div class="card__header__subtitle">Subtitle</div>
+//             </div>
+//             <div class="card__body">Body</div>
+//             <div class="card__footer">
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-add"></span>
+//                         <div class="subtext">Add</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-edit"></span>
+//                         <div class="subtext">Edit</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-trash"></span>
+//                         <div class="subtext">Delete</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;">
+//                         <span class="icon-more"></span>
+//                         <div class="subtext">More</div>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Card.Actions
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 col-xl-3">
+//         <div class="card card--raised">
+//             <div class="card__header">
+//                 <a class="text-large" href="javascript:;">APe05ffb91c.9a97</a>
+//                 <div class="text-small">Cisco Aironet 2600i Access Point</div>
+//             </div>
+//             <div class="card__body">
+//                 <div class="text-center">
+//                     <img style="max-width:200px" src="public/img/wireless-1.jpg">
+//                 </div>
+//                 <div class="base-margin-top">
+//                     <div class="text-bold text-uppercase half-margin-top">Serial Number</div>
+//                     <div>FCZ1339XRU</div>
+//                     <div class="text-bold text-uppercase half-margin-top">Product Id</div>
+//                 </div>
+//                 <div>AIR-CAP25021-C-K9</div>
+//                 <a href="javascript:;">View Product Documentation</a>
+//                 <div class="text-bold text-uppercase half-margin-top">Software Version</div>
+//                 <a href="javascript:;">15.3.3-JE</a>
+//                 <div>
+//                     <span class="half-margin-top text-uppercase label label--success">Covered until 2018-10-24</span>
+//                 </div>
+//             </div>
+//             <div class="card__footer">
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-briefcase"></span>
+//                         <div class="subtext">Open Case</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-edit"></span>
+//                         <div class="subtext">Edit</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-download"></span>
+//                         <div class="subtext">Download</div>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-lg-5">
+//         <div class="card card--raised">
+//             <div class="card__header">
+//                 <img src="public/img/workspaces.png">
+//             </div>
+//             <div class="card__body">
+//                 <div class="flex-center-vertical">
+//                     <img class="thumb thumb--small" src="public/img/user-photo-thumb-1.png">
+//                     <div class="flex-fluid text-left half-margin-left">
+//                         <div class="text-bold">Mary Thompson</div>
+//                         <div>Account Executive</div>
+//                     </div>
+//                     <div>
+//                         <div class="rating rating--alt">
+//                             <div class="rating__stars">
+//                                 <div class="rating__star" title="4 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="3 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="2 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="1 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="4 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-lg-4">
+//         <div class="card card--raised">
+//             <div class="card__header">
+//                 <div class="flex">
+//                     <div class="flex-fluid half-margin-right">
+//                         <img src="public/img/phone-webex.png">
+//                     </div>
+//                     <div class="base-margin-top text-left base-margin-right">
+//                         <div class="display-4">Introducing</div>
+//                         <p>Cisco WebEx</p>
+//                         <div>
+//                             <img style="max-width:48px" src="public/img/webex-meetings-thumb.png">
+//                             <img style="max-width:48px" src="public/img/webex-teams-thumb.png">
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="card__footer">
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-webex"></span>
+//                         <div class="subtext">Demo</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-headset"></span>
+//                         <div class="subtext">Contact Us</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-download"></span>
+//                         <div class="subtext">Download</div>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Card.Examples
+//
+
+.card,
+a.card {
+    @include panel($border-color: $base-border-color);
+    display: block;
+
+    &__header,
+    &__body {
+        @include panel();
+        @include panel-padding();
+    }
+
+    &__body {
+        margin-top: $base-spacing-half;
+        margin-bottom: $base-spacing-half;
+    }
+
+    &__header {
+        border-bottom: $base-border;
+
+        .card__header__title {
+            font-size: $cui-card-title-font-size;
+        }
+        .card__header__subtitle {
+            font-size: $cui-card-subtitle-font-size;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: $base-spacing-half;
+        border-top: $base-border;
+        background-color: $cui-card-footer-background;
+
+        .card__footer__item {
+            flex: 1;
+            display: inline-flex;
+            flex-direction: column;
+            min-height: 30px;
+
+            a {
+                font-size: 20px;
+                margin: 0 $base-spacing-half;
+
+                .subtext {
+                    color: $base-font-color;
+                    font-size: 10px;
+                    white-space: nowrap;
+                    margin-top: 3px;
+                    text-transform: uppercase;
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: none;
+
+                    .subtext {
+                        color: $hover-link-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &.card--raised {
+        box-shadow: $cui-card-box-shadow;
+    }
+
+    &.hover,
+    &.selected {
+        cursor: pointer;
+        border-color: $base-accent-color;
+    }
+
+    &.selected {
+        &:before {
+            background: $cui-card-selection-background;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+}
+
+.card__header + .card__footer {
+    border-top: 0 none;
+}
+
+
+// Global Modifiers
+
+&.cui--animated a.card.selected:before,
+&.cui--animated .card.selected:before {
+    animation: fade-in .15s 1 linear;
+}

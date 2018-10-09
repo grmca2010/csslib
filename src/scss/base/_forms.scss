@@ -1,0 +1,103 @@
+
+form {
+    margin-bottom: $base-spacing;
+
+    &:last-child,
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+fieldset {
+    margin: 0 0 $base-spacing 0;
+    padding: 0;
+    border: 0;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-group {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 0 0 $base-spacing-half 0;
+}
+.form-group.form-group--compressed { margin: 0 0 $base-spacing-qtr 0; }
+.form-group.form-group--regular { margin: 0 0 $base-spacing-half 0; }
+.form-group.form-group--loose { margin: 0 0 $base-spacing 0; }
+.form-group.form-group--nospacing { margin: 0; }
+
+.form-group.form-group--inline {
+    display: inline-flex;
+    margin: 0 $base-spacing-half 0 0;
+}
+.form-group.form-group--inline.form-group--compressed { margin: 0 $base-spacing-qtr 0 0; }
+.form-group.form-group--inline.form-group--regular { margin: 0 $base-spacing-half 0 0; }
+.form-group.form-group--inline.form-group--loose { margin: 0 $base-spacing 0 0; }
+.form-group.form-group--inline.form-group--nospacing { margin: 0; }
+
+.form-group--inline:last-of-type {
+    margin: 0;
+}
+
+.checkbox__label,
+.radio__label,
+.switch__label,
+.form-group label {
+    color: $base-form-label-color;
+    text-align: left;
+    font-weight: $base-form-label-weight;
+}
+
+.form-dropdown__select {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    right: $base-spacing * 0.25;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    z-index: 1;
+
+    &:focus {
+        ~ label {
+            color: $base-font-color;
+
+            &::after {
+                bottom: -4px;
+                height: 5px;
+                background: $base-accent-color;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        ~ .form-dropdown__chevron {
+            &::after {
+                color: $base-font-color;
+            }
+        }
+    }
+}
+
+.form-dropdown__chevron {
+    &:after {
+        @include icon-chevron-down;
+        color: $base-disabled-color;
+        font-size: $small-font-size;
+        position: absolute;
+        margin-top: 1px;
+        right: $base-spacing * 0.25;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.2s ease;
+    }
+}
+
+// Global Modifiers
+
+&.cui--compressed .form-group { margin: 0 0 $base-spacing-qtr 0 ; }
+&.cui--compressed .form-group.form-group--inline { margin: 0 $base-spacing-qtr 0 0; }

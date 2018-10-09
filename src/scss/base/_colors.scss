@@ -1,0 +1,164 @@
+//
+// Color Palette
+//
+// Cisco Digital Color Palette
+//
+// Styleguide Color
+//
+
+
+//
+// Colors
+//
+// Markup:
+// <div class="section">
+//     <div class="subheader">Hero Palette</div>
+//     <div class="swatch swatch-core--ciscoblue">
+//         <div>Accent Color</div>
+//         <div>Blockquote</div>
+//         <div>Hero</div>
+//         <div>Label</div>
+//         <div>Loader</div>
+//         <div>Panel</div>
+//         <div>Timeline</div>
+//     </div>
+//     <div class="swatch swatch-core--ciscoindigo">
+//         <div>Blockquote</div>
+//         <div>Hero</div>
+//         <div>Label</div>
+//         <div>Loader</div>
+//         <div>Panel</div>
+//         <div>Sidebar</div>
+//     </div>
+//     <div class="swatch swatch-core--ciscogreen">
+//         <div>Alert</div>
+//         <div>Blockquote</div>
+//         <div>Gauge</div>
+//         <div>Hero</div>
+//         <div>Label</div>
+//         <div>Loader</div>
+//         <div>Panel</div>
+//         <div>Step</div>
+//         <div>Timeline</div>
+//     </div>
+// </div>
+// <div class="section">
+//     <div class="subheader">Accent Palette</div>
+//     <div class="swatch swatch-core--accentorange">
+//         <div>Alert</div>
+//         <div>Gauge</div>
+//         <div>Label</div>
+//         <div>Panel</div>
+//         <div>Rating</div>
+//         <div>Step</div>
+//         <div>Timeline</div>
+//     </div>
+//     <div class="swatch swatch-core--accentred">
+//         <div>Alert</div>
+//         <div>Gauge</div>
+//         <div>Label</div>
+//         <div>Panel</div>
+//         <div>Step</div>
+//         <div>Timeline</div>
+//     </div>
+// </div>
+// <div class="section">
+//     <div class="subheader">Secondary Colors</div>
+//     <div class="swatch swatch-core--darkgray1"></div>
+//     <div class="swatch swatch-core--darkgray2"></div>
+//     <div class="swatch swatch-core--medgray2"></div>
+//     <div class="swatch swatch-core--white"></div>
+//     <div class="swatch swatch-core--ltblue"></div>
+//     <div class="swatch swatch-core--vibblue"></div>
+// </div>
+// <div class="section">
+//     <div class="subheader">Supporting Colors</div>
+//     <div class="swatch swatch-supp--darkgray3"></div>
+//     <div class="swatch swatch-supp--darkgray4"></div>
+//     <div class="swatch swatch-supp--medgray4"></div>
+//     <div class="swatch swatch-supp--litegray2"></div>
+//     <div class="swatch swatch-supp--litegray3"></div>
+//     <div class="swatch swatch-supp--litegray5"></div>
+// </div>
+// <div class="section">
+//     <div class="subheader">Status Colors</div>
+//     <div class="swatch swatch-stat--statusblue"></div>
+//     <div class="swatch swatch-stat--statusturq"></div>
+//     <div class="swatch swatch-stat--statusgreen"></div>
+//     <div class="swatch swatch-stat--statusyellow"></div>
+//     <div class="swatch swatch-stat--statusorange"></div>
+//     <div class="swatch swatch-stat--statusred"></div>
+// </div>
+//
+// Weight: -10
+//
+// Styleguide Color.Palette
+//
+
+@mixin swatch-fill($background, $color, $border, $name) {
+    position: relative;
+    background: $background;
+    color: $color;
+    border: $base-border;
+
+    &:after {
+        font-family: sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        content: "#{$name}  #{$background}";
+        position: absolute;
+        left: $base-spacing-half;
+        bottom: $base-spacing-qtr;
+    }
+}
+
+.swatch {
+    font-size: $small-font-size;
+    line-height: 16px;
+    display: inline-flex;
+    flex-direction: column;
+    padding: $base-spacing-half;
+    width: 200px;
+    height: 200px;
+    transition: all 0.2s;
+
+    /*
+        &:hover {
+            box-shadow: $base-box-shadow;
+            transform: scale3d(1.1,1.1,1.1);
+            transition: all 0.2s;
+            z-index: 1;
+        }
+    */
+
+    // Hero Palette
+    &.swatch-core--ciscoblue      { @include swatch-fill($cisco-blue, $white, $cisco-blue, "Cisco Blue"); }
+    &.swatch-core--ciscoindigo    { @include swatch-fill($cisco-indigo, $white, $cisco-indigo, "Indigo Blue"); }
+    &.swatch-core--ciscogreen     { @include swatch-fill($cisco-green, $white, $cisco-green, "Green"); }
+
+    // Accent Palette
+    &.swatch-core--accentorange   { @include swatch-fill($accent-orange, $white, $accent-orange, "Orange"); }
+    &.swatch-core--accentred      { @include swatch-fill($accent-red, $white, $accent-red, "Red"); }
+
+    // Secondary Palette
+    &.swatch-core--darkgray1      { @include swatch-fill($dark-gray-1, $white, $dark-gray-1, "Dark Gray 1"); }
+    &.swatch-core--darkgray2      { @include swatch-fill($dark-gray-2, $white, $dark-gray-2, "Dark Gray 2"); }
+    &.swatch-core--medgray2       { @include swatch-fill($med-gray-2, $white, $med-gray-2, "Medium Gray 2"); }
+    &.swatch-core--white          { @include swatch-fill($white, $black, $base-border-color, "Cisco Core White"); }
+    &.swatch-core--ltblue         { @include swatch-fill($light-blue, $black, $light-blue, "Light Blue"); }
+    &.swatch-core--vibblue        { @include swatch-fill($vibrant-blue, $white, $vibrant-blue, "Vibrant Blue"); }
+
+    &.swatch-supp--darkgray3      { @include swatch-fill($dark-gray-3, $white, $dark-gray-3, "Dark Gray 3"); }
+    &.swatch-supp--darkgray4      { @include swatch-fill($dark-gray-4, $white, $dark-gray-4, "Dark Gray 4"); }
+    &.swatch-supp--medgray4       { @include swatch-fill($med-gray-4, $black, $base-border-color, "Medium Gray 4"); }
+    &.swatch-supp--litegray2      { @include swatch-fill($light-gray-2, $black, $light-gray-2, "Light Gray 2"); }
+    &.swatch-supp--litegray3      { @include swatch-fill($light-gray-3, $black, $light-gray-3, "Light Gray 3"); }
+    &.swatch-supp--litegray5      { @include swatch-fill($light-gray-5, $black, $base-border-color, "Light Gray 5"); }
+
+    &.swatch-stat--statusblue     { @include swatch-fill($status-blue, $white, $status-blue, "Status Blue"); }
+    &.swatch-stat--statusturq     { @include swatch-fill($status-turq, $white, $status-turq, "Status Turquoise"); }
+    &.swatch-stat--statusgreen    { @include swatch-fill($status-green, $white, $status-green, "Status Green"); }
+    &.swatch-stat--statusyellow   { @include swatch-fill($status-yellow, $white, $status-yellow, "Status Yellow"); }
+    &.swatch-stat--statusorange   { @include swatch-fill($status-orange, $white, $status-orange, "Status Orange"); }
+    &.swatch-stat--statusred      { @include swatch-fill($status-red, $white, $status-red, "Status Red"); }
+}
