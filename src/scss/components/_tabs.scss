@@ -1,33 +1,32 @@
 //
-// Tab
+// Tab updated
 //
-// Styleguide Tab
+// Since: 1.0.1
+//
+// Styleguide Components.Tab
 //
 
 
 //
 // Layout
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `active` on a tab to denote the current selection<br>Wrap your tabs in a `secondary-tabs` div to differentiate header tabs versus secondary tabs (bottom border is added for secondary tabs).</div>
-// </div>
+// <blockquote>Add the class `active` on a tab to denote the current selection<br>Wrap your tabs in a `secondary-tabs` div to differentiate header tabs versus secondary tabs (bottom border is added for secondary tabs)</blockquote>
 //
 // Markup:
 // <div class="secondary-tabs">
 //     <ul class="tabs">
 //         <li class="tab active">
-//             <a tabindex="1">
+//             <a>
 //                 <div class="tab__heading" title="Tab Title 1">Tab Title 1</div>
 //             </a>
 //         </li>
 //         <li class="tab">
-//             <a tabindex="2">
+//             <a>
 //                 <div class="tab__heading" title="Tab Title 2">Tab Title 2</div>
 //             </a>
 //         </li>
 //         <li class="tab">
-//             <a tabindex="3">
+//             <a>
 //                 <div class="tab__heading" title="Tab Title 3">Tab Title 3</div>
 //             </a>
 //         </li>
@@ -36,33 +35,30 @@
 //
 // Weight: 1
 //
-// Styleguide Tab.Layout
+// Styleguide Components.Tab.Layout
 //
 
 
 //
 // Tall
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `nav-tabs--tall` or `tabs--tall` to render taller tabs<br>This only affects horizontal tabs but can be applied to either header tabs or secondary tabs.</div>
-// </div>
+// <blockquote>Add the class `nav-tabs--tall` or `tabs--tall` to render taller tabs<br>This only affects horizontal tabs but can be applied to either header tabs or secondary tabs</blockquote>
 //
 // Markup:
 // <div class="secondary-tabs">
 //     <ul class="tabs tabs--tall">
 //         <li class="tab active">
-//             <a tabindex="4">
+//             <a>
 //                 <div class="tab__heading" title="Tall Tab 1">Tall Tab 1</div>
 //             </a>
 //         </li>
 //         <li class="tab">
-//             <a tabindex="5">
+//             <a>
 //                 <div class="tab__heading" title="Tall Tab 2">Tall Tab 2</div>
 //             </a>
 //         </li>
 //         <li class="tab">
-//             <a tabindex="6">
+//             <a>
 //                 <div class="tab__heading" title="Tall Tab 3">Tall Tab 3</div>
 //             </a>
 //         </li>
@@ -71,44 +67,37 @@
 //
 // Weight: 2
 //
-// Styleguide Tab.Tall
+// Styleguide Components.Tab.Tall
 //
 
 
 //
 // Direction
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Tabs can flow horizontal (default) or add the class `tabs--vertical` for vertical.</div>
-// </div>
+// <blockquote>Tabs can flow horizontal (default) or add the class `tabs--vertical` for vertical</blockquote>
 //
 // Markup:
-// <div class="row">
-//     <div class="col-md-4">
-//         <ul class="tabs tabs--vertical">
-//             <li class="tab active">
-//                 <a tabindex="7">
-//                     <div class="tab__heading" title="Tab Title 1">Tab Title 1</div>
-//                 </a>
-//            </li>
-//             <li class="tab">
-//                 <a tabindex="8">
-//                     <div class="tab__heading" title="Tab Title 2">Tab Title 2</div>
-//                 </a>
-//             </li>
-//             <li class="tab">
-//                 <a tabindex="9">
-//                     <div class="tab__heading" title="Tab Title 3">Tab Title 3</div>
-//                 </a>
-//             </li>
-//         </ul>
-//     </div>
-// </div>
+// <ul class="tabs tabs--vertical">
+//     <li class="tab active">
+//         <a>
+//             <div class="tab__heading" title="Tab Title 1">Tab Title 1</div>
+//         </a>
+//     </li>
+//     <li class="tab">
+//         <a>
+//             <div class="tab__heading" title="Tab Title 2">Tab Title 2</div>
+//         </a>
+//     </li>
+//     <li class="tab">
+//         <a>
+//             <div class="tab__heading" title="Tab Title 3">Tab Title 3</div>
+//         </a>
+//     </li>
+// </ul>
 //
 // Weight: 3
 //
-// Styleguide Tab.Direction
+// Styleguide Components.Tab.Direction
 //
 
 
@@ -119,17 +108,17 @@
 // <div class="secondary-tabs">
 //     <ul class="tabs">
 //         <li id="tab-routers" class="tab active">
-//             <a tabindex="10">
+//             <a>
 //                 <div class="tab__heading" title="Routers">Routers</div>
 //             </a>
 //         </li>
 //         <li id="tab-switches" class="tab">
-//             <a tabindex="11">
+//             <a>
 //                 <div class="tab__heading" title="Switches">Switches</div>
 //             </a>
 //         </li>
 //         <li id="tab-wireless" class="tab">
-//             <a tabindex="12">
+//             <a>
 //                 <div class="tab__heading" title="Wireless">Wireless</div>
 //             </a>
 //         </li>
@@ -230,7 +219,7 @@
 //
 // Weight: 4
 //
-// Styleguide Tab.Example
+// Styleguide Components.Tab.Example
 //
 
 ul.tabs,
@@ -244,11 +233,6 @@ ul.tabs,
     overflow-y: hidden;
     white-space: nowrap;
     padding: 0;
-
-    a:active,
-    a:focus {
-        text-decoration: none;
-    }
 
     .header & {
         display: block;
@@ -287,12 +271,6 @@ ul.tabs,
                 color: $base-link-color;
                 text-decoration: none;
             }
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 -5px 0 $base-accent-color inset;
-                color: $base-link-color;
-            }
         }
     }
 
@@ -320,7 +298,6 @@ ul.tabs,
 
     &.tabs--vertical {
         box-shadow: none;
-
         > li {
             display: block;
             font-size: $base-font-size;
@@ -336,13 +313,8 @@ ul.tabs,
                 align-items: center;
                 padding: 0 0 0 ($base-spacing * 0.5);
                 height: $base-tab-vertical-height;
-
                 &.tab__heading {
                     margin: 0 ($base-spacing * 0.25);
-                }
-
-                &:focus {
-                    box-shadow: $base-spacing-qtr 0 $base-accent-color inset;
                 }
             }
 
@@ -361,7 +333,7 @@ ul.tabs,
 
             &:hover {
                 > a {
-                    box-shadow: $base-spacing-qtr 0 $base-accent-color inset;
+                    box-shadow: ($base-spacing * 0.25) 0 $base-accent-color inset;
                 }
             }
         }
@@ -428,14 +400,4 @@ ul.tabs,
 // Fix for text cutoff on mobile menu. Need to exclude tabs from the list
 ul.tabs.list li+li {
     margin: 0;
-}
-
-
-// Global Modifiers
-
-&--animated .tabs,
-&--animated .nav-tabs {
-    > li:hover > a {
-        transition: box-shadow .2s linear;
-    }
 }

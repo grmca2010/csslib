@@ -1,24 +1,24 @@
 //
-// Modal
+// Modal updated
 //
-// Styleguide Modal
+// Basic modals<br><br>
+// Since 1.2.0
+//
+// Styleguide Components.Modal
 //
 
 
 //
 // Backdrop
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">A background overlay is required for modals. Add this markup to your page. <b>NOTE:</b> Only add this element once and toggle it's display when showing / hiding your modals</div>
-// </div>
+// <blockquote>A background overlay is required for modals. Add this markup to your page. <b>NOTE:</b> Only add this element once and toggle it's display when showing / hiding your modals</blockquote>
 //
 // Markup:
 // <div class="modal-backdrop hide"></div>
 //
 // Weight: 1
 //
-// Styleguide Modal.Backdrop
+// Styleguide Components.Modal.Backdrop
 //
 
 
@@ -26,8 +26,8 @@
 // Size
 //
 // Markup:
-// <button class="btn btn--secondary" id="modal-small-open">Small Modal</button>
-// <button class="btn btn--secondary" id="modal-large-open">Large Modal</button>
+// <button class="btn" id="modal-small-open">Small Modal</button>
+// <button class="btn" id="modal-large-open">Large Modal</button>
 // <br>
 // <div class="modal modal--small hide" id="modal-small">
 //     <div class="modal__dialog">
@@ -37,10 +37,10 @@
 //                 <h1 class="modal__title">Small Modal</h1>
 //             </div>
 //             <div class="modal__body">
-//                <p class="subtitle">This is a small width modal</p>
+//                <p>This is a small width modal</p>
 //             </div>
 //             <div class="modal__footer">
-//                 <button class="btn" id="modal-small-close">Ok</button>
+//                 <button class="btn btn--secondary" id="modal-small-close">Ok</button>
 //             </div>
 //         </div>
 //     </div>
@@ -53,10 +53,10 @@
 //                 <h1 class="modal__title">Large Modal</h1>
 //             </div>
 //             <div class="modal__body">
-//                <p class="subtitle">This is a large width modal</p>
+//                <p>This is a large width modal</p>
 //             </div>
 //             <div class="modal__footer">
-//                 <button class="btn" id="modal-large-close">Ok</button>
+//                 <button class="btn btn--secondary" id="modal-large-close">Ok</button>
 //             </div>
 //         </div>
 //     </div>
@@ -64,7 +64,7 @@
 //
 // Weight: 2
 //
-// Styleguide Modal.Size
+// Styleguide Components.Modal.Size
 //
 
 
@@ -72,7 +72,7 @@
 // Feedback Example
 //
 // Markup:
-// <button class="btn btn--secondary" id="modal-feedback-open">Open Feedback</button>
+// <button class="btn" id="modal-feedback-open">Open Feedback</button>
 // <br>
 // <div class="modal hide" id="modal-feedback">
 //     <div class="modal__dialog">
@@ -80,7 +80,7 @@
 //             <a class="modal__close"><span class="icon-close"></span></a>
 //             <div class="modal__header">
 //                 <h1 class="modal__title">Feedback</h1>
-//                 <p class="subtitle">Tell us what you think...</p>
+//                 <p>Tell us what you think...</p>
 //             </div>
 //             <div class="modal__body">
 //                 <div class="rating rating--large rating--alt">
@@ -103,16 +103,13 @@
 //                    </div>
 //                </div>
 //                <br>
-//                <div class="form-group label--floated">
-//                    <div class="form-group__text">
-//                        <textarea class="textarea" rows="3" required></textarea>
-//                        <label>Comments</label>
-//                    </div>
-//                </div>
+//                <form>
+//                    <textarea class="textarea textarea--well" placeholder="Comments" rows="3"></textarea>
+//                </form>
 //             </div>
 //             <div class="modal__footer">
 //                 <button class="btn" id="modal-feedback-close">Cancel</button>
-//                 <button class="btn btn--primary">Submit</button>
+//                 <button class="btn btn--secondary">Submit</button>
 //             </div>
 //         </div>
 //     </div>
@@ -120,58 +117,50 @@
 //
 // Weight: 3
 //
-// Styleguide Modal.Feedback Example
+// Styleguide Components.Modal.Feedback Example
 //
 
 
 //
-// Login Example
+// Login Example (with animation)
 //
 // Markup:
-// <button class="btn btn--secondary" id="modal-login-open">Open Login</button>
+// <button class="btn" id="modal-login-open">Open Login</button>
 // <br>
-// <div class="modal modal--animated modal--large hide" id="modal-login">
+// <div class="modal modal--animated hide" id="modal-login">
 //     <div class="modal__dialog">
 //         <div class="modal__content">
 //             <a class="modal__close"><span class="icon-close"></span></a>
 //             <div class="modal__header">
-//                 <div class="icon-cisco text-blue text-huge half-margin-bottom"></div>
-//                 <h1 class="modal__title">Network Transport Receiver</h1>
-//                 <p class="subtitle">Version E3.25B3.1</p>
+//                 <div class="icon-cisco text-blue text-huge"></div>
+//                 <br>
+//                 <h1 class="modal__title">Product Name</h1>
+//                 <p>Version 1.0</p>
 //             </div>
 //             <div class="modal__body">
 //                <form>
-//                    <div class="row">
-//                        <div class="col-md-6 offset-md-3">
-//                            <div class="form-group">
-//                                <div class="form-group__text">
-//                                    <input type="text" value="dadams@cisco.com" required>
-//                                    <label>User ID</label>
-//                                </div>
+//                    <div class="form-group">
+//                        <div class="form-group__text">
+//                            <input type="text" required>
+//                            <label>User ID</label>
+//                            <div class="required-block">
+//                                <span class="icon-asterisk"></span>
 //                            </div>
 //                        </div>
 //                    </div>
-//                    <div class="row">
-//                        <div class="col-md-6 offset-md-3">
-//                            <div class="form-group">
-//                                <div class="form-group__text">
-//                                    <input type="password" value="hitchhiker" required>
-//                                    <label>Password</label>
-//                                </div>
-//                            </div>
-//                            <div class="form-group">
-//                                <label class="checkbox">
-//                                    <input type="checkbox" checked>
-//                                    <span class="checkbox__input"></span>
-//                                    <span class="checkbox__label">Remember me</span>
-//                                </label>
+//                    <div class="form-group">
+//                        <div class="form-group__text">
+//                            <input type="password" required>
+//                            <label>Password</label>
+//                            <div class="required-block">
+//                                <span class="icon-asterisk"></span>
 //                            </div>
 //                        </div>
 //                    </div>
 //                </form>
 //             </div>
 //             <div class="modal__footer">
-//                 <button class="btn btn--primary">Log In</button>
+//                 <button class="btn btn--secondary">Log In</button>
 //             </div>
 //         </div>
 //     </div>
@@ -179,7 +168,7 @@
 //
 // Weight: 4
 //
-// Styleguide Modal.Login Example
+// Styleguide Components.Modal.Login Example
 //
 
 .modal-backdrop {
@@ -207,6 +196,10 @@
     pointer-events: none;
     z-index: $base-modal-zindex;
     pointer-events: auto;
+
+    &--animated {
+        animation: blowup .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards, fade-in .25s 1 linear;
+    }
 
     &.show {
         .modal__dialog,
@@ -257,7 +250,6 @@
 
             &:hover {
                 color: $base-link-color;
-                text-decoration: none;
             }
         }
 
@@ -290,10 +282,4 @@
             max-width: $large-modal-maxwidth;
         }
     }
-}
-
-// Global Modifiers
-
-&--animated .modal {
-    animation: blowup .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards, fade-in .25s 1 linear;
 }

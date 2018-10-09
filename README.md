@@ -2,7 +2,7 @@
      <img src="docs/public/img/Collage.png" width="100%">
 </center>
 
-# Cisco UI kit
+# Cisco UI kit (formerly Atlantic-UI Kit)
 
 The Cisco UI kit and pattern library is a style guide governing HTML markup at the presentation layer. It contains no javascript components. Instead, it focuses on HTML and CSS and leaves the choice of javascript toolkit up to the individual development teams.
 
@@ -10,7 +10,7 @@ This library is a collaboration between Cisco Brand and Cisco Engineering
 
 ## Copyright and License
 
-Code and documentation copyright 2018 Cisco Systems.
+Code and documentation copyright 2017 Cisco Systems.
 
 ## Links
 
@@ -58,19 +58,19 @@ in your package.json file add this line to the dependencies section:
 ```
 or from your command-line run:
 ```
-npm install git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.3.0-official --save
+npm install git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official --save
 ```
 
 #### 4.3 Or you can fetch the UI Kit source from Git via Bower like this:
 in your bower.json file add this line to the dependencies section:
 ```
-"cisco-ui": "http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.3.0-official"
+"cisco-ui": "http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official"
 ```
 
 #### 4.4 Or you can fetch the UI Kit source from Git via Yarn like this:
 From the command-line run:
 ```
-yarn add git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.3.0-official
+yarn add git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official
 ```
 
 NOTE: We use a common naming syntax like this v.{version}-official

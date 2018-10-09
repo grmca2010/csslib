@@ -1,6 +1,9 @@
 //
 // Breadcrumb
 //
+// Since 1.0.0<br><br>
+//
+// Styleguide Components.Breadcrumb
 //
 
 
@@ -20,6 +23,7 @@
 //     <li><span>Cisco Catalyst 3750E</span></li>
 // </ul>
 //
+// Styleguide Components.Breadcrumb.Example
 //
 
 .breadcrumb {
@@ -40,7 +44,7 @@
         + li:before {
             padding: $breadcrumb-padding;
             color: $breadcrumb-color;
-            content: $breadcrumb-separator;
+            content: '/\00a0';
         }
 
         span[class^="icon-"] {

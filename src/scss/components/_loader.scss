@@ -1,7 +1,9 @@
 //
 // Loader
 //
-// Styleguide Loader
+// Since: 1.0.4 updated
+//
+// Styleguide Components.Loader
 //
 
 
@@ -13,7 +15,7 @@
 //     <div class="col-md-3" IGNORE>
 //         <div class="panel panel--bordered" IGNORE>
 //             <h4 class="text-center half-margin-bottom">Default</h4 IGNORE>
-//             <div class="loading-spinner flex-center" aria-label="Loading, please wait...">
+//             <div class="loading-spinner flex-center">
 //                 <div class="wrapper">
 //                     <div class="wheel"></div>
 //                 </div>
@@ -23,7 +25,7 @@
 //     <div class="col-md-3" IGNORE>
 //         <div class="panel panel--bordered" IGNORE>
 //             <h4 class="text-center half-margin-bottom">Indigo</h4 IGNORE>
-//             <div class="loading-spinner loading-spinner--indigo flex-center" aria-label="Loading, please wait...">
+//             <div class="loading-spinner loading-spinner--indigo flex-center">
 //                 <div class="wrapper">
 //                     <div class="wheel"></div>
 //                 </div>
@@ -34,7 +36,7 @@
 //
 // Weight: 1
 //
-// Styleguide Loader.Spinner
+// Styleguide Components.Loader.Spinner
 //
 
 
@@ -46,7 +48,7 @@
 //     <div class="col-md-3" IGNORE>
 //         <div class="panel panel--dkgray" IGNORE>
 //             <h4 class="text-center">Default</h4 IGNORE>
-//             <div class="loading-dots" aria-label="Loading, please wait...">
+//             <div class="loading-dots">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
@@ -56,7 +58,7 @@
 //     <div class="col-md-3" IGNORE>
 //         <div class="panel panel--bordered" IGNORE>
 //             <h4 class="text-center">Muted</h4 IGNORE>
-//             <div class="loading-dots loading-dots--muted" aria-label="Loading, please wait...">
+//             <div class="loading-dots loading-dots--muted">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
@@ -66,7 +68,7 @@
 //     <div class="col-md-3" IGNORE>
 //         <div class="panel panel--bordered" IGNORE>
 //             <h4 class="text-center">Success</h4 IGNORE>
-//             <div class="loading-dots loading-dots--success" aria-label="Loading, please wait...">
+//             <div class="loading-dots loading-dots--success">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
@@ -76,7 +78,7 @@
 //     <div class="col-md-3" IGNORE>
 //         <div class="panel panel--bordered" IGNORE>
 //             <h4 class="text-center">Info</h4 IGNORE>
-//             <div class="loading-dots loading-dots--info" aria-label="Loading, please wait...">
+//             <div class="loading-dots loading-dots--info">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
@@ -87,7 +89,7 @@
 //
 // Weight: 2
 //
-// Styleguide Loader.Dots
+// Styleguide Components.Loader.Dots
 //
 
 .loader {
@@ -117,10 +119,6 @@
 }
 
 .loading-spinner {
-    &:focus {
-        @include focus-outline;
-    }
-
     .wrapper {
         .wheel {
             position: relative;
@@ -151,10 +149,6 @@
 .loading-dots {
     padding: $base-spacing * 0.5;
     text-align: center;
-
-    &:focus {
-        @include focus-outline;
-    }
 
     &.loading-dots--muted {
         > span {

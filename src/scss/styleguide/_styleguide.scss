@@ -29,27 +29,10 @@
         }
     }
 
-    pre, code {
+    pre,
+    code {
         font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         color: $black;
         padding: $base-spacing * 0.25;
-    }
-
-    .alert code {
-        font-weight: bold;
-        padding: 0;
-    }
-
-    .markup {
-        a.markup-toggle:hover {
-            text-decoration: none;
-        }
-        &-toggle:after {
-            @include drawer-closed;
-            transition: all .2s;
-        }
-        &.active .markup-toggle:after {
-            @include drawer-opened;
-        }
     }
 }

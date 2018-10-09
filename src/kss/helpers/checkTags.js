@@ -1,82 +1,31 @@
 module.exports.register = function(handlebars) {
 
-    handlebars.registerHelper('getPrevious', function(arr, val) {
-        var idx = 0;
-        for (var ii=0; ii<arr.length; ii++) {
-            if (arr[ii].toUpperCase() === val.toUpperCase()) {
-                idx = ii;
-                break;
-            }
-        }
-        var newIdx = (idx === 0) ? arr.length-1 : idx-1;
-        return (arr[newIdx].toLowerCase());
-    });
-
-    handlebars.registerHelper('getNext', function(arr, val) {
-        var idx = 0;
-        for (var ii=0; ii<arr.length; ii++) {
-            if (arr[ii].toUpperCase() === val.toUpperCase()) {
-                idx = ii;
-                break;
-            }
-        }
-        var newIdx = (idx === (arr.length-1)) ? 0 : idx+1;
-        return (arr[newIdx].toLowerCase());
-    });
-
-    handlebars.registerHelper('getIndexOf', function(arr, val) {
-        for (var ii=0; ii<arr.length; ii++) {
-            console.log("getIndexOf()");
-            console.dir(arr[ii]);
-            if (arr[ii].referenceURI === val) {
-                return ii;
-            }
-        }
-        return -1;
-    });
-
-    handlebars.registerHelper('if_eq', function(a, b, opts) {
-        if(a == b) {
-            return opts.fn(this);
-        }
-    });
-
-    handlebars.registerHelper('json', function(context) {
-        return JSON.stringify(context);
-    });
-
     handlebars.registerHelper('removeIgnore', function(arg1, arg2, options) {
-        return arg1.replace(/(^.*IGNORE.*\n?)/gm, "");
+        return arg1.replace(/^.*IGNORE.*$/mg, "");
     });
 
     handlebars.registerHelper('extractParent', function(arg1, arg2, options) {
         return arg1.split('-')[1];
     });
 
-    handlebars.registerHelper('checkSketch', function(arg1, arg2, options) {
-        var ret = '';
+    handlebars.registerHelper('checkTemplate', function(arg1, arg2, options) {
+        var ret = arg1;
         var allowedTemplates = [{
                 name: 'sketch',
-                label: 'Sketch',
+                label: 'Sketch Template',
                 url: 'public/documents/sketch/'
             }
         ];
         for (var ii=0; ii<allowedTemplates.length; ii++) {
             var template = allowedTemplates[ii];
             if (arg1.indexOf(template.name) !== -1) {
-                var url = template.url + arg2 + '.sketch';
-                ret = '<a class="btn btn--white-ghost" href="' + url + '" download="' + url + '">' + template.label + '<span class="qtr-margin-left icon-download"></span></a>';
+                var pattern = arg2.split('-')[1];
+                var url = template.url + pattern + '.sketch';
+                ret = ret.replace(template.name, ''); // Remove the template name from the description
+                ret += '<div class="text-right"><a class="btn btn--small btn--white-ghost" href="' + url + '" download="' + url + '">' + template.label + '<span class="qtr-margin-left icon-download"></span></a></div>';
             }
         }
         return new handlebars.SafeString(ret);
-    });
-
-    handlebars.registerHelper('removeSketch', function(arg) {
-        return arg.replace('sketch', '');
-    });
-
-    handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
-        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
     });
 
     handlebars.registerHelper('checkTags', function(arg1, arg2, options) {

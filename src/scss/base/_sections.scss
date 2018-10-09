@@ -1,18 +1,17 @@
 //
 // Section
 //
-// A section is a container used to organize a page into separate regions.
+// A section is a container used to organize a page into separate regions<br><br>
+// Since: 1.0.2
 //
+// Styleguide Base.Section
 //
 
 
 //
 // Padding
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add padding to your sections.</div>
-// </div>
+// <blockquote>Add padding to your sections</blockquote>
 //
 // Markup:
 // <div class="section section--compressed panel">
@@ -27,16 +26,14 @@
 //
 // Weight: 1
 //
+// Styleguide Base.Section.Padding
 //
 
 
 //
 // Divider
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add dividers to your sections.</div>
-// </div>
+// <blockquote>Add dividers to your sections</blockquote>
 //
 // Markup:
 // <div class="section section--marquee">
@@ -48,6 +45,7 @@
 //
 // Weight: 2
 //
+// Styleguide Base.Section.Dividers
 //
 
 .sections {
@@ -77,6 +75,16 @@
     @include clearfix;
     padding-left: 0;
     padding-right: 0;
+
+    @for $idx from 1 through $max-columns { // Deprecated
+        &--#{$idx}col {
+            > div {
+                @include media-breakpoint-up(md) {
+                    @include col(1/$idx, $cycle: $idx, $gutter: 1);
+                }
+            }
+        }
+    }
 
     @include section-padding();
 

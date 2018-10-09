@@ -1,7 +1,9 @@
 //
 // Divider
 //
-// Styleguide Divider
+// Since: 1.1.0
+//
+// Styleguide Base.Divider
 //
 
 
@@ -9,7 +11,7 @@
 // Thickness
 //
 // Markup:
-// <div class="panel">
+// <div class="section">
 //     <h6>Default</h6>
 //     <div class="divider"></div>
 //     <h6>Thick</h6>
@@ -20,7 +22,7 @@
 //
 // Weight: 1
 //
-// Styleguide Divider.Thickness
+// Styleguide Base.Divider.Thickness
 //
 
 
@@ -28,7 +30,6 @@
 // Spacing
 //
 // Markup:
-// <div class="panel">
 // <div class="row">
 //     <div class="col-md-4">
 //         <p>Compressed</p>
@@ -55,11 +56,10 @@
 //         <div><img src="public/img/short-paragraph.png"></div>
 //     </div>
 // </div>
-// </div>
 //
 // Weight: 2
 //
-// Styleguide Divider.Spacing
+// Styleguide Base.Divider.Spacing
 //
 
 
@@ -67,15 +67,13 @@
 // Accent
 //
 // Markup:
-// <div class="panel">
-//     <div class="divider divider--accent-blue"></div>
-//     <div class="divider divider--thick divider--accent-blue"></div>
-//     <div class="divider divider--thicker divider--accent-blue"></div>
-// </div>
+// <div class="divider divider--accent-blue"></div>
+// <div class="divider divider--thick divider--accent-blue"></div>
+// <div class="divider divider--thicker divider--accent-blue"></div>
 //
 // Weight: 3
 //
-// Styleguide Divider.Accent
+// Styleguide Base.Divider.Accent
 //
 
 
@@ -83,15 +81,13 @@
 // Accent Color
 //
 // Markup:
-// <div class="panel">
-//     <div class="divider divider--thick divider--accent-blue"></div>
-//     <div class="divider divider--thick divider--accent-indigo"></div>
-//     <div class="divider divider--thick divider--accent-success"></div>
-// </div>
+// <div class="divider divider--thick divider--accent-blue"></div>
+// <div class="divider divider--thick divider--accent-indigo"></div>
+// <div class="divider divider--thick divider--accent-success"></div>
 //
 // Weight: 4
 //
-// Styleguide Divider.Accent Color
+// Styleguide Base.Divider.Accent Color
 //
 
 
@@ -99,7 +95,7 @@
 // Examples
 //
 // Markup:
-// <div class="panel panel--bordered panel--loose">
+// <div class="panel">
 //     <h2>Cisco Aironet 1540 Series</h2>
 //     <div class="divider divider--accent-success"></div>
 //     <div class="row">
@@ -119,16 +115,16 @@
 // <div class="panel panel--loose panel--dkgray">
 //     <h2>THE NETWORK. <span class="text-blue">INTUITIVE.</span></h2>
 //     <div class="divider divider--thicker divider--accent-blue"></div>
-//     <h6>Powered by intent. Informed by context. Growing more intuitive every day.</h6><br>
+//     <h6>Powered by intent. Informed by context. Growing more intuitive every day.</h6>
 //     <div class="section">
-//         <button class="btn btn--white">Watch Video</button>
+//         <button class="btn btn--primary">Watch Video</button>
 //         <button class="btn btn--white-ghost">Get Resources</button>
 //     </div>
 // </div>
 //
 // Weight: 5
 //
-// Styleguide Divider.Examples
+// Styleguide Base.Divider.Examples
 //
 
 .divider {
@@ -154,6 +150,33 @@
     &--compressed       { @include divider-horizontal-spacing($base-spacing-compressed); }
     &--regular          { @include divider-horizontal-spacing($base-spacing-regular); }
     &--loose            { @include divider-horizontal-spacing($base-spacing-loose); }
+
+    // Circle labels DEPRECATED in 1.0.6
+    .label {
+        &--circle {
+            top: -($base-label-circle-size);
+            position: relative;
+            box-shadow: 0 0 0 ($base-spacing * 0.5) $base-background-color;
+
+            .divider--alt {
+                box-shadow: 0 0 0 ($base-spacing * 0.5) $alt-background-color;
+            }
+
+            @each $circle-label-name, $circle-label-size, $circle-label-font-size in $label-circles {
+                &.label--#{$circle-label-name} {
+                    top: -($circle-label-size / 2);
+                }
+            }
+        }
+    }
+
+    &--alt {
+        .label {
+            &--circle {
+                box-shadow: 0 0 0 ($base-spacing * 0.5) $alt-background-color;
+            }
+        }
+    }
 }
 
 // Accent size adjustment
@@ -164,10 +187,4 @@
             height: $divider-height;
         }
     }
-}
-
-// Global Modifiers
-
-&.cui--compressed .divider {
-    @include divider-horizontal-spacing($base-spacing-compressed);
 }

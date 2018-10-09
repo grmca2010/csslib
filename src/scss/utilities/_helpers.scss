@@ -1,128 +1,20 @@
 //
 // Helpers
 //
-// Styleguide Helpers
+// Styleguide Utilities.Helpers
 //
 
 
-
 //
-// Nudges
+// Readonly
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Use nudges to add extra margin (or padding) to your elements. Nudges are built off of the base spacing (20px) value so `half-margin-left` is equivalent to margin left 10px.</div>
-// </div>
+// To readonly any element, you can add a `readonly` attribute or the class `.readonly`
 //
 // Markup:
-// <div class="subheader">Margin Nudges</div>
-// <div>no-margin</div>
-// <div>no-margin-[top,right,bottom,left]</div>
-// <div>qtr-margin-[top,right,bottom,left]</div>
-// <div>half-margin-[top,right,bottom,left]</div>
-// <div>base-margin-[top,right,bottom,left]</div>
-// <div>dbl-margin-[top,right,bottom,left]</div>
-// <br>
-// <div class="subheader">Padding Nudges</div>
-// <div>no-padding</div>
-// <div>no-padding-[top,right,bottom,left]</div>
-// <div>qtr-padding-[top,right,bottom,left]</div>
-// <div>half-padding-[top,right,bottom,left]</div>
-// <div>base-padding-[top,right,bottom,left]</div>
-// <div>dbl-padding-[top,right,bottom,left]</div>
+// <textarea rows="4" style="width:100%;resize:none" class="readonly">Readonly text area</textarea>
 //
-// Weight: 1
+// Styleguide Utilities.Helpers.Readonly
 //
-// Styleguide Helpers.Nudges
-//
-
-.inline-qtr-spacing {
-    > *+* {
-        margin-left: $base-spacing * 0.25;
-    }
-}
-
-.no-margin           { margin: 0 !important; }
-.no-margin-top       { margin-top: 0 !important; }
-.no-margin-right     { margin-right: 0 !important; }
-.no-margin-bottom    { margin-bottom: 0 !important; }
-.no-margin-left      { margin-left: 0 !important; }
-
-.qtr-margin          { margin: $base-spacing * 0.25 !important; }
-.qtr-margin-top      { margin-top: $base-spacing * 0.25 !important; }
-.qtr-margin-right    { margin-right: $base-spacing * 0.25 !important; }
-.qtr-margin-bottom   { margin-bottom: $base-spacing * 0.25 !important; }
-.qtr-margin-left     { margin-left: $base-spacing * 0.25 !important; }
-
-.half-margin         { margin: $base-spacing * 0.5 !important; }
-.half-margin-top     { margin-top: $base-spacing * 0.5 !important; }
-.half-margin-right   { margin-right: $base-spacing * 0.5 !important; }
-.half-margin-bottom  { margin-bottom: $base-spacing * 0.5 !important; }
-.half-margin-left    { margin-left: $base-spacing * 0.5 !important; }
-
-.base-margin         { margin: $base-spacing !important; }
-.base-margin-top     { margin-top: $base-spacing !important; }
-.base-margin-right   { margin-right: $base-spacing !important; }
-.base-margin-bottom  { margin-bottom: $base-spacing !important; }
-.base-margin-left    { margin-left: $base-spacing !important; }
-
-.dbl-margin          { margin: $base-spacing * 2 !important; }
-.dbl-margin-top      { margin-top: $base-spacing * 2 !important; }
-.dbl-margin-right    { margin-right: $base-spacing * 2 !important; }
-.dbl-margin-bottom   { margin-bottom: $base-spacing * 2 !important; }
-.dbl-margin-left     { margin-left: $base-spacing * 2 !important; }
-
-.no-padding          { padding: 0 !important; }
-.no-padding-top      { padding-top: 0 !important; }
-.no-padding-right    { padding-right: 0 !important; }
-.no-padding-bottom   { padding-bottom: 0 !important; }
-.no-padding-left     { padding-left: 0 !important; }
-
-.qtr-padding         { padding: $base-spacing * 0.25 !important; }
-.qtr-padding-top     { padding-top: $base-spacing * 0.25 !important; }
-.qtr-padding-right   { padding-right: $base-spacing * 0.25 !important; }
-.qtr-padding-bottom  { padding-bottom: $base-spacing * 0.25 !important; }
-.qtr-padding-left    { padding-left: $base-spacing * 0.25 !important; }
-
-.half-padding        { padding: $base-spacing * 0.5 !important; }
-.half-padding-top    { padding-top: $base-spacing * 0.5 !important; }
-.half-padding-right  { padding-right: $base-spacing * 0.5 !important; }
-.half-padding-bottom { padding-bottom: $base-spacing * 0.5 !important; }
-.half-padding-left   { padding-left: $base-spacing * 0.5 !important; }
-
-.base-padding        { padding: $base-spacing !important; }
-.base-padding-top    { padding-top: $base-spacing !important; }
-.base-padding-right  { padding-right: $base-spacing !important; }
-.base-padding-bottom { padding-bottom: $base-spacing !important; }
-.base-padding-left   { padding-left: $base-spacing !important; }
-
-.dbl-padding         { padding: $base-spacing * 2 !important; }
-.dbl-padding-top     { padding-top: $base-spacing * 2 !important; }
-.dbl-padding-right   { padding-right: $base-spacing * 2 !important; }
-.dbl-padding-bottom  { padding-bottom: $base-spacing * 2 !important; }
-.dbl-padding-left    { padding-left: $base-spacing * 2 !important; }
-
-
-//
-// Disabled
-//
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">To disable any element, you can add a `disabled` attribute or the class `disabled`.</div>
-// </div>
-//
-// Markup:
-// <button class="btn btn--small" disabled>Disabled via Attribute</button>
-// <button class="btn btn--small disabled">Disabled via Class</button>
-//
-// Weight: 2
-//
-// Styleguide Helpers.Disabled
-//
-
-*[disabled], .disabled {
-    @include disabled;
-}
 
 .readonly {
     @include readonly;
@@ -130,35 +22,46 @@
 
 
 //
+// Disabled
+//
+// To disable any element, you can add a `disabled` attribute or the class `.disabled`
+//
+// Markup:
+// <button class="btn btn--small" disabled>Disabled via Attribute</button>
+// <button class="btn btn--small disabled">Disabled via Class</button>
+//
+// Styleguide Utilities.Helpers.Disabled
+//
+
+*[disabled],
+.disabled {
+    @include disabled;
+}
+
+
+//
 // Blurred
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `.blurred` to any container to hide data.</div>
-// </div>
+// Add the class `.blurred` to any container to hide data
 //
 // Markup:
 // <div class="panel panel--bordered blurred">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo fringilla pellentesque. Donec bibendum sem auctor, aliquet odio non, ornare nulla. Vivamus lobortis eros et metus ultricies, eu interdum mi efficitur. Ut et nulla justo. Praesent vulputate mauris mi, ut mollis diam mollis finibus. Donec a orci ex. Praesent dictum sapien massa, lacinia lobortis elit imperdiet eget. Integer maximus erat vestibulum porttitor sodales. Donec accumsan nisl a sagittis hendrerit. Maecenas rhoncus cursus rutrum. Donec congue ipsum eget lacus sagittis, vel pellentesque arcu condimentum. Praesent vel laoreet dui, at mattis elit. In hac habitasse platea dictumst.</div>
 //
-// Weight: 3
-//
-// Styleguide Helpers.Blurred
+// Styleguide Utilities.Helpers.Blurred
 //
 
 .blurred {
-    pointer-events: none !important;
-    filter: blur(5px) !important;
+    pointer-events: none;
+    filter: blur(5px);
 }
 
 
 //
 // Clearfix
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">To apply a clearfix to a block element containing floated elements, you can add the class `.clearfix` on the element in the markup.</div>
-// </div>
+// To apply a clearfix to a block element containing floated elements, you can add the class `.clearfix` on the element in the markup
 //
+// Styleguide Utilities.Helpers.Clearfix
 //
 
 .clearfix {
@@ -168,6 +71,39 @@
 
 //
 // Absolute Center
+//
+// To horizontally and vertically center an element inside of another element, you can add the class `.absolute-center` on the element in the markup
+//
+// Markup:
+// <div class="row" IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center text-uppercase">centered</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--top text-uppercase">top</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--right text-uppercase">right</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--bottom text-uppercase">bottom</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--left text-uppercase">left</h1>
+//         </div>
+//     </div IGNORED>
+// </div IGNORED>
+//
+// Styleguide Utilities.Helpers.Absolute Center
 //
 
 .absolute-center {
@@ -181,110 +117,52 @@
 
 
 //
-// Floats
+// Float Left
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Use the class `pull-left` or `pull-right` to float elements.</div>
-// </div>
+// Use the class `pull-left` to float any element left
 //
 // Markup:
 // <div class="clearfix">
-//     <h4 class="pull-left">pull-left</h4>
-//     <h4 class="pull-right">pull-right</h4>
+//     <div class="pull-left">pull-left</div>
 // </div>
 //
-// Styleguide Helpers.Floats
+// Styleguide Utilities.Helpers.Float Left
 //
 
 .pull-left {
     float: left !important;
 }
+
 .pull-center {
     float: center !important;
 }
+
+
+//
+// Float Right
+//
+// Use the class `pull-right` to float any element right
+//
+// Markup:
+// <div class="clearfix">
+//     <div class="pull-right">pull-right</div>
+// </div>
+//
+// Styleguide Utilities.Helpers.Float Right
+//
+
 .pull-right {
     float: right !important;
 }
 
 
-//
-// Flex Fluid
-//
-// Markup:
-// <div class="half-margin-bottom">Autofill empty space</div>
-// <div class="flex">
-//     <div class="panel panel--bordered">Fills only what is needed</div>
-//     <div class="flex-fluid">
-//         <div class="panel panel--ltgray">Fills rest of horizontal space</div>
-//     </div>
-// </div>
-//
-// Styleguide Helpers.Flex Fluid
-//
-
-
-//
-// Flex Center Horizontal
-//
-// Markup:
-// <div class="half-margin-bottom">Center elements horizontally on a single line</div>
-// <div class="flex-center-horizontal">
-//     <label class="checkbox">
-//         <input type="checkbox">
-//         <span class="checkbox__input"></span>
-//         <span class="checkbox__label">Click me</span>
-//     </label>
-//     <button class="btn btn--primary half-margin-left">Click me</button>
-//     <div class="half-margin-left">Lorem ipsum</div>
-// </div>
-//
-// Styleguide Helpers.Flex Center Horizontal
-//
-
-
-//
-// Flex Center
-//
-// Markup:
-// <div class="half-margin-bottom">Center elements both horizontally and vertically on a single line</div>
-// <div class="flex-center">
-//     <label class="checkbox">
-//         <input type="checkbox">
-//         <span class="checkbox__input"></span>
-//         <span class="checkbox__label">Click me</span>
-//     </label>
-//     <button class="btn btn--primary half-margin-left">Click me</button>
-//     <div class="half-margin-left">Lorem ipsum</div>
-// </div>
-//
-// Styleguide Helpers.Flex Center
-//
-
-
-//
-// Flex Center Vertical
-//
-// Markup:
-// <div class="half-margin-bottom">Center elements vertically on a single line</div>
-// <div class="flex-center-vertical">
-//     <label class="checkbox">
-//         <input type="checkbox">
-//         <span class="checkbox__input"></span>
-//         <span class="checkbox__label">Click me</span>
-//     </label>
-//     <button class="btn btn--primary half-margin-left">Click me</button>
-//     <div class="half-margin-left">Lorem ipsum</div>
-// </div>
-//
-// Styleguide Helpers.Flex Center Vertical
-//
+// Flex Helpers
 
 .flex {
     @include flex;
 }
 .flex-inline {
-    display: inline-flex !important;
+    display: inline-flex;
 }
 .flex-center {
     @include flex-center;
@@ -299,16 +177,16 @@
     @include flex-fluid;
 }
 .flex-fill {
-    flex: 1 0 auto !important;
+    flex: 1 0 auto;
 }
 .flex-inline-center-horizontal {
-    display: inline-flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 }
 .flex-inline-center-vertical {
-    display: inline-flex !important;
-    justify-content: center !important;
+    display: inline-flex;
+    justify-content: center;
 }
 .flex-align-end {
     align-items: flex-end !important;
@@ -317,23 +195,23 @@
     align-items: flex-start !important;
 }
 .flex--compressed > * {
-    flex-basis: $base-spacing-compressed !important;
+    flex-basis: $base-spacing-compressed;
 }
 .flex--regular > * {
-    flex-basis: $base-spacing-regular !important;
+    flex-basis: $base-spacing-regular;
 }
 .flex--loose > * {
-    flex-basis: $base-spacing * 2 !important;
+    flex-basis: $base-spacing * 2;
 }
 .flex-right {
-    justify-content: flex-end !important;
+    justify-content: flex-end;
 }
 .flex-column {
-    flex-direction: column !important;
+    flex-direction: column;
 }
 .flex-wrap {
-    display: flex !important;
-    flex-wrap: wrap !important;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -341,108 +219,31 @@
 // Text Helpers
 //
 // Markup:
-// <div class="responsive-table">
-//     <table class="table table--compressed table--bordered">
-//         <thead>
-//             <tr>
-//                 <th>CSS Class</th>
-//                 <th>Example</th>
-//             </tr>
-//         </thead>
-//         <tbody>
-//             <tr>
-//                 <td>text-info</td>
-//                 <td class="text-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-success</td>
-//                 <td class="text-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-danger</td>
-//                 <td class="text-danger">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-warning</td>
-//                 <td class="text-warning">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-left</td>
-//                 <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-center</td>
-//                 <td class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-right</td>
-//                 <td class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-bold</td>
-//                 <td class="text-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-muted</td>
-//                 <td class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-lowercase</td>
-//                 <td class="text-lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-uppercase</td>
-//                 <td class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-capitalize</td>
-//                 <td class="text-capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-tiny</td>
-//                 <td class="text-tiny">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-xsmall</td>
-//                 <td class="text-xsmall">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-small</td>
-//                 <td class="text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-medium</td>
-//                 <td class="text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-large</td>
-//                 <td class="text-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-xlarge</td>
-//                 <td class="text-xlarge">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-huge</td>
-//                 <td class="text-huge">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-italic</td>
-//                 <td class="text-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-monospace</td>
-//                 <td class="text-monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//             <tr>
-//                 <td>text-noselect</td>
-//                 <td class="text-noselect">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-//             </tr>
-//         </tbody>
-//     </table>
-// </div>
+// <div class="text-left">text-left</div>
+// <div class="text-center">text-center</div>
+// <div class="text-right">text-right</div>
+// <div class="text-bold">text-bold</div>
+// <div class="text-muted">text-muted</div>
+// <div class="text-normal">text-normal</div>
+// <div class="text-ghost">text-ghost</div>
+// <div class="text-light">text-light</div>
+// <div class="text-muted">text-muted</div>
+// <div class="text-lowercase">text-lowercase</div>
+// <div class="text-uppercase">text-uppercase</div>
+// <div class="text-capitalize">text-capitalize</div>
+// <div class="text-tiny">text-tiny</div>
+// <div class="text-xsmall">text-xsmall</div>
+// <div class="text-small">text-small</div>
+// <div class="text-medium">text-medium</div>
+// <div class="text-large">text-large</div>
+// <div class="text-huge">text-huge</div>
+// <div class="text-italic">text-italic</div>
+// <div class="text-monospace">text-monospace</div>
+// <div style="width:200px" class="text-ellipsis">text-ellipsis This is an ellipsed string.</div>
+// <div class="text-noselect">text-noselect Try and select me</div>
+// <div class="text-break">text-break ThisIsReallyLongTextWithoutWhiteSpaceSoItWillOverrideContainersAndOtherSuchHtmlItemsBecauseOfNoLogicalBreakPointsBeingBuiltIn</div>
 //
-// Styleguide Helpers.Text Helpers
+// Styleguide Utilities.Helpers.Text Helpers
 //
 
 .text-left {
@@ -483,34 +284,27 @@
 }
 .text-tiny {
     font-size: $tiny-font-size !important;
-    line-height: $tiny-font-size !important;
 }
 .text-xsmall {
     font-size: $xsmall-font-size !important;
-    line-height: $xsmall-font-size !important;
 }
 .text-small {
     font-size: $small-font-size !important;
 }
 .text-medium {
     font-size: $medium-font-size !important;
-    line-height: $medium-font-size !important;
 }
 .text-large {
     font-size: $large-font-size !important;
-    line-height: $large-font-size !important;
 }
 .text-xlarge {
     font-size: $xlarge-font-size !important;
-    line-height: $xlarge-font-size !important;
 }
 .text-huge {
     font-size: $huge-font-size !important;
-    line-height: $huge-font-size !important;
 }
 .text-goliath {
     font-size: $goliath-font-size !important;
-    line-height: $goliath-font-size !important;
 }
 .text-italic {
     font-style: italic !important;
@@ -519,7 +313,7 @@
     color: $white !important;
 }
 .text-transparent-qtr {
-    opacity: .25 !important;
+    opacity: .25;
 }
 .monospace,
 .text-monospace {
@@ -538,13 +332,13 @@
     @include text-break;
 }
 .text-marquee {
-    font-size: 32px !important;
+    font-size: 32px;
 
     @include media-breakpoint-up(sm) {
-        font-size: 40px !important;
+        font-size: 40px;
     }
     @include media-breakpoint-up(md) {
-        font-size: 48px !important;
+        font-size: 48px;
     }
 }
 .text-billboard {
@@ -565,6 +359,26 @@
     font-weight: bold !important;
     margin-bottom: $base-spacing * 0.5 !important;
 }
+
+
+//
+// Text Colors
+//
+// Markup:
+// <div class="text-primary">text-primary</div>
+// <div class="text-secondary">text-secondary</div>
+// <div class="text-default">text-default</div>
+// <div class="text-cta">text-cta</div>
+// <div class="text-indigo">text-indigo</div>
+// <div class="text-info">text-info</div>
+// <div class="text-success">text-success</div>
+// <div class="text-danger">text-danger</div>
+// <div class="text-warning">text-warning</div>
+// <div class="text-turquoise">text-turquoise</div>
+//
+// Styleguide Utilities.Helpers.Text Colors
+//
+
 .text-primary, .text--primary           { color: $primary !important; }
 .text-secondary, .text--secondary       { color: $secondary !important; }
 .text-default, .text--default           { color: $base-font-color !important; }
@@ -593,46 +407,114 @@
 }
 .icon-huge {
     &:before {
-        line-height: 84px !important;
-        font-size: 84px !important;
+        line-height: 84px;
+        font-size: 84px;
     }
 }
 .icon-large {
     &:before {
-        line-height: 56px !important;
-        font-size: 56px !important;
+        line-height: 56px;
+        font-size: 56px;
     }
 }
 .icon-medium-large {
     &:before {
-        line-height: 36px !important;
-        font-size: 36px !important;
+        line-height: 36px;
+        font-size: 36px;
     }
 }
 .icon-medium {
     &:before {
-        line-height: 28px !important;
-        font-size: 28px !important;
+        line-height: 28px;
+        font-size: 28px;
     }
 }
 .icon-medium-small {
     &:before {
-        line-height: 24px !important;
-        font-size: 24px !important;
+        line-height: 24px;
+        font-size: 24px;
     }
 }
 .icon-small {
     &:before {
-        line-height: 18px !important;
-        font-size: 18px !important;
+        line-height: 18px;
+        font-size: 18px;
     }
 }
 .icon-tiny {
     &:before {
-        line-height: 10px !important;
-        font-size: 10px !important;
+        line-height: 10px;
+        font-size: 10px;
     }
 }
+
+// Nudges
+
+.inline-qtr-spacing {
+    > *+* {
+        margin-left: $base-spacing * 0.25;
+    }
+}
+
+.no-margin           { margin: 0; }
+.no-margin-top       { margin-top: 0; }
+.no-margin-right     { margin-right: 0; }
+.no-margin-bottom    { margin-bottom: 0; }
+.no-margin-left      { margin-left: 0; }
+
+.qtr-margin          { margin: $base-spacing * 0.25 !important; }
+.qtr-margin-top      { margin-top: $base-spacing * 0.25 !important; }
+.qtr-margin-right    { margin-right: $base-spacing * 0.25 !important; }
+.qtr-margin-bottom   { margin-bottom: $base-spacing * 0.25 !important; }
+.qtr-margin-left     { margin-left: $base-spacing * 0.25 !important; }
+
+.half-margin         { margin: $base-spacing * 0.5 !important; }
+.half-margin-top     { margin-top: $base-spacing * 0.5 !important; }
+.half-margin-right   { margin-right: $base-spacing * 0.5 !important; }
+.half-margin-bottom  { margin-bottom: $base-spacing * 0.5 !important; }
+.half-margin-left    { margin-left: $base-spacing * 0.5 !important; }
+
+.base-margin         { margin: $base-spacing !important; }
+.base-margin-top     { margin-top: $base-spacing !important; }
+.base-margin-right   { margin-right: $base-spacing !important; }
+.base-margin-bottom  { margin-bottom: $base-spacing !important; }
+.base-margin-left    { margin-left: $base-spacing !important; }
+
+.dbl-margin          { margin: $base-spacing * 2 !important; }
+.dbl-margin-top      { margin-top: $base-spacing * 2 !important; }
+.dbl-margin-right    { margin-right: $base-spacing * 2 !important; }
+.dbl-margin-bottom   { margin-bottom: $base-spacing * 2 !important; }
+.dbl-margin-left     { margin-left: $base-spacing * 2 !important; }
+
+.no-padding          { padding: 0; }
+.no-padding-top      { padding-top: 0; }
+.no-padding-right    { padding-right: 0; }
+.no-padding-bottom   { padding-bottom: 0; }
+.no-padding-left     { padding-left: 0; }
+
+.qtr-padding         { padding: $base-spacing * 0.25 !important; }
+.qtr-padding-top     { padding-top: $base-spacing * 0.25 !important; }
+.qtr-padding-right   { padding-right: $base-spacing * 0.25 !important; }
+.qtr-padding-bottom  { padding-bottom: $base-spacing * 0.25 !important; }
+.qtr-padding-left    { padding-left: $base-spacing * 0.25 !important; }
+
+.half-padding        { padding: $base-spacing * 0.5 !important; }
+.half-padding-top    { padding-top: $base-spacing * 0.5 !important; }
+.half-padding-right  { padding-right: $base-spacing * 0.5 !important; }
+.half-padding-bottom { padding-bottom: $base-spacing * 0.5 !important; }
+.half-padding-left   { padding-left: $base-spacing * 0.5 !important; }
+
+.base-padding        { padding: $base-spacing !important; }
+.base-padding-top    { padding-top: $base-spacing !important; }
+.base-padding-right  { padding-right: $base-spacing !important; }
+.base-padding-bottom { padding-bottom: $base-spacing !important; }
+.base-padding-left   { padding-left: $base-spacing !important; }
+
+.dbl-padding         { padding: $base-spacing * 2 !important; }
+.dbl-padding-top     { padding-top: $base-spacing * 2 !important; }
+.dbl-padding-right   { padding-right: $base-spacing * 2 !important; }
+.dbl-padding-bottom  { padding-bottom: $base-spacing * 2 !important; }
+.dbl-padding-left    { padding-left: $base-spacing * 2 !important; }
 
 
 // Hide on iOS Devices
@@ -643,7 +525,7 @@
 }
 
 .toggle {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .v-separator {
@@ -672,7 +554,7 @@
 
 // Rotate element 180 degrees
 .rotate-180 {
-    transform: rotate(180deg) !important;
+    transform: rotate(180deg);
 }
 
 .hide {
@@ -683,24 +565,20 @@
     display: block !important;
 }
 
-.hide-overflow {
-    overflow: hidden !important;
-}
-
 .visible {
-    visibility: visible !important;
+    visibility: visible;
 }
 
 .invisible {
-    visibility: hidden !important;
+    visibility: hidden;
 }
 
 .user-entered-data {
-    white-space: pre-line !important;
+    white-space: pre-line;
 }
 
 .small {
-    font-size: $small-font-size !important;
+    font-size: $small-font-size;
 }
 
 @media (max-width: 767px) {
@@ -719,18 +597,18 @@
 }
 
 .row.no-gutters {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+    margin-right: 0;
+    margin-left: 0;
 }
 .row.no-gutters > [class^="col-"],
 .row.no-gutters > [class*=" col-"] {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 // Add disabled mouse / touch pointer
 .disable-pointer {
-    pointer-events: none !important;
+    pointer-events: none;
 }
 
 //
@@ -796,23 +674,3 @@
         display: block !important;
     }
 }
-
-.hidden-sm-down { @include media-breakpoint-down(sm) { display: none !important; }}
-.hidden-md-down { @include media-breakpoint-down(md) { display: none !important; }}
-.hidden-lg-down { @include media-breakpoint-down(lg) { display: none !important; }}
-.hidden-xl-down { @include media-breakpoint-down(xl) { display: none !important; }}
-
-.visible-sm-down { @include media-breakpoint-down(sm) { display: block !important; }}
-.visible-md-down { @include media-breakpoint-down(md) { display: block !important; }}
-.visible-lg-down { @include media-breakpoint-down(lg) { display: block !important; }}
-.visible-xl-down { @include media-breakpoint-down(xl) { display: block !important; }}
-
-.hidden-sm-up { @include media-breakpoint-up(sm) { display: none !important; }}
-.hidden-md-up { @include media-breakpoint-up(md) { display: none !important; }}
-.hidden-lg-up { @include media-breakpoint-up(lg) { display: none !important; }}
-.hidden-xl-up { @include media-breakpoint-up(xl) { display: none !important; }}
-
-.visible-sm-up { @include media-breakpoint-up(sm) { display: block !important; }}
-.visible-md-up { @include media-breakpoint-up(md) { display: block !important; }}
-.visible-lg-up { @include media-breakpoint-up(lg) { display: block !important; }}
-.visible-xl-up { @include media-breakpoint-up(xl) { display: block !important; }}

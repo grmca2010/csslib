@@ -1,4 +1,12 @@
 //
+// Description List
+//
+// Since: 1.0.0
+//
+// Styleguide Base.Description List
+//
+
+//
 // Description Lists
 //
 // Supports the following modifiers: <br><br>
@@ -16,10 +24,9 @@
 //
 
 //
-// Description List
+// Stacked
 //
 // Markup:
-// <div class="subheader">Stacked</div>
 // <div>
 //     <dl>
 //         <dt>But I must explain</dt>
@@ -32,8 +39,19 @@
 //         <dd>Consequences that are extremely</dd>
 //     </dl>
 // </div>
+//
+// Weight: 1
+//
+// Styleguide Base.Description Lists.Stacked
+//
+
+
+//
+// Inline
+//
+// Markup:
 // <div>
-//     <div class="subheader">Inline</div>
+//     <p>Inline</p>
 //     <dl class="dl--inline">
 //         <dt>But I must explain</dt>
 //         <dd>To you how all this mistaken</dd>
@@ -47,7 +65,7 @@
 // </div>
 // <br>
 // <div>
-//     <div class="subheader">Inline Centered</div>
+//     <p>Inline Centered</p>
 //     <dl class="dl--inline-centered">
 //         <dt>But I must explain</dt>
 //         <dd>To you how all this mistaken</dd>
@@ -61,7 +79,7 @@
 // </div>
 // <br>
 // <div>
-//     <div class="subheader">Inline Wrapped</div>
+//     <p>Inline Wrapped</p>
 //     <dl class="dl--inline-wrap">
 //         <dt>But I must explain</dt>
 //         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
@@ -75,7 +93,7 @@
 // </div>
 // <br>
 // <div>
-//     <div class="subheader">Inline Wrapped and Centered</div>
+//     <p>Inline Wrapped and Centered</p>
 //     <dl class="dl--inline-wrap dl--inline-centered">
 //         <dt>But I must explain</dt>
 //         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
@@ -88,9 +106,9 @@
 //     </dl>
 // </div>
 //
-// Weight: 4
+// Weight: 2
 //
-// Styleguide List.Description
+// Styleguide Base.Description Lists.Inline
 //
 
 @mixin dl-size($width) {
@@ -107,6 +125,7 @@ dt {
 }
 
 dd {
+    color: $base-dl-value-color;
     margin-bottom: $base-dl-label-bottom-spacing;
 }
 
@@ -114,10 +133,6 @@ dl.dl--skinny {
     dt {
         width: $base-spacing * 5;
     }
-}
-
-dl.dl--compressed dd {
-    margin-bottom: 0;
 }
 
 .dl--inline,

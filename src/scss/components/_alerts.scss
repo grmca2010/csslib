@@ -1,94 +1,65 @@
 //
 // Alert
 //
-// Styleguide Alert
+// An alert should be used to display important but conditional messages to the user<br><br>
+// Since: 1.0.0
+//
+// Styleguide Components.Alert
 //
 
 
 //
-// Severity
+// Color
+//
+// <blockquote>Use the approved status colors and icons below to denote message severity<br>NOTE: Starting in 1.0.6 all variations of the Alert pattern have been deprecated. Going forward there will only be one supported pattern.</blockquote>
 //
 // Markup:
 // <div class="row">
 //     <div class="col-md-6">
 //         <div class="alert">
-//             <div class="alert__icon icon-info-outline"></div>
-//             <div class="alert__message">Information (default) <a href="javascript:;">Link</a></div>
-//             <a href="javascript:;" class="alert__close icon-close"></a>
+//             <div class="alert__icon icon-info-circle"></div>
+//             <div class="alert__message">Information (default) <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
 //         </div>
-//     </div>
-//     <div class="col-md-6">
 //         <div class="alert alert--success">
-//             <div class="alert__icon icon-check-outline"></div>
-//             <div class="alert__message">Success <a href="javascript:;">Link</a></div>
-//             <a href="javascript:;" class="alert__close icon-close"></a>
+//             <div class="alert__icon icon-check"></div>
+//             <div class="alert__message">Success <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
 //         </div>
 //     </div>
 //     <div class="col-md-6">
 //         <div class="alert alert--warning">
-//             <div class="alert__icon icon-warning-outline"></div>
-//             <div class="alert__message">Warning <a href="javascript:;">Link</a></div>
-//             <a href="javascript:;" class="alert__close icon-close"></a>
+//             <div class="alert__icon icon-exclamation-triangle"></div>
+//             <div class="alert__message">Warning <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
 //         </div>
-//     </div>
-//     <div class="col-md-6">
-//         <div class="alert alert--danger" role="alert">
-//             <div class="alert__icon icon-error-outline"></div>
-//             <div class="alert__message">
-//                 <span>Danger <a href="javascript:;">Link</a>
-//                 <div class="half-margin-top">Make sure to add the ARIA <b>role='alert'</b> for all danger-level alerts</div>
-//             </div>
-//             <a href="javascript:;" class="alert__close icon-close"></a>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 1
-//
-// Styleguide Alert.Severity
-//
-
-
-//
-// Examples
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-4">
-//         <div class="alert alert--success">
-//             <div class="alert__icon icon-check-outline"></div>
-//             <div class="alert__message">
-//                 <div>Successfully Imported 21 Products</div>
-//                 <ul class="half-margin-top">
-//                     <li>Routers <a href="javascript:;">14</a></li>
-//                     <li>Switches <a href="javascript:;">7</a></li>
-//                 </ul>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-md-4">
-//         <div class="alert alert--warning">
-//             <div class="alert__icon icon-warning-outline"></div>
-//             <div class="alert__message">
-//                 <h5>Adobe Flash Player Memory Corruption Vulnerability</h5>
-//                 <p>A vulnerability in Adobe Flash Player could allow an unauthenticated remote attacker to execute arbitrary code.</p>
-//                 <p>
-//                     <a href="javascript:;">Click here for details</a>
-//                 </p>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-md-4">
-//         <div class="alert alert--danger" role="alert">
-//             <div class="alert__icon icon-error-outline"></div>
-//             <div class="alert__message">Encountered an error connecting to device <b>RF_Gateway_10</b>. Reason: Codec mismatch. Make sure both sides are using the same codec and version.</div>
+//         <div class="alert alert--danger">
+//             <div class="alert__icon icon-error"></div>
+//             <div class="alert__message">Danger <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
 //         </div>
 //     </div>
 // </div>
 //
 // Weight: 2
 //
-// Styleguide Alert.Examples
+// Styleguide Components.Alert.Color
+//
+
+
+//
+// Example
+//
+// Markup:
+// <div class="alert alert--warning-alt">
+//     <div class="alert__icon icon-exclamation-triangle"></div>
+//     <div class="alert__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel velit lectus. Nulla a mi porta ex consequat lacinia non vel augue. In sit amet hendrerit turpis. Nulla sed egestas turpis. Nam non lectus eget dui blandit iaculis non eget erat. Praesent eros metus, porta sed commodo porta, blandit quis massa. Morbi sed dolor justo. Pellentesque lacinia elit urna, cursus pretium sem malesuada ac.<br><br><a href="http://www.lipsum.com/">Lorem Ipsum Generator</a></div>
+//     <div class="alert__close icon-close"></div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Components.Alert.Example
 //
 
 .alert {
@@ -97,8 +68,9 @@
         $background: $base-alert-default-background,
         $color: $base-alert-default-color,
         $border-color: $base-alert-default-border-color,
-        $border-left-width: 48px,
-        $icon-color: $base-alert-default-icon-color
+        $border-left-width: $base-alert-default-border-left-width,
+        $icon-color: $base-alert-default-icon-color,
+        $link-color: $base-alert-default-link-color
     );
     @include panel-padding();
 
@@ -106,6 +78,7 @@
     @each $alert-obj in $alert-colors {
         &--#{map-get($alert-obj, name)} {
             @include panel(map-get($alert-obj, params)...);
+
             .alert__icon {
                 @if map-has-nested-keys($alert-obj, 'params', 'icon-color') {
                     color: map-deep-get($alert-obj, 'params', 'icon-color');
@@ -116,40 +89,41 @@
 
     display: inline-flex;
     align-items: center;
-    position: relative;
-    border-radius: $base-border-radius;
     width: 100%;
     margin: $base-alert-margin;
 
-    &__close {
-        font-size: 18px;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
     &__icon {
-        color: $white;
-        position: absolute;
-        left: -36px;
-        top: 10px;
-        font-size: $base-alert-icon-size;
+        color: $base-alert-default-icon-color;
     }
 
     &__icon,
     &__close {
         align-self: flex-start;
+        font-size: $base-alert-icon-size;
+        line-height: $base-alert-icon-size;
     }
 
     &__message {
         @include flex-fluid;
         @include text-break-word;
 
+        font-weight: normal;
+        margin: $base-alert-message-margin;
+
         a:hover,
         a:active,
         a:focus {
             color: $hover-link-color;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        opacity: $base-alert-close-icon-opacity;
+
+        &:hover {
+            opacity: 1;
+            color: $base-accent-color;
         }
     }
 }

@@ -1,17 +1,16 @@
 //
-// Table
+// Table updated
 //
-// Styleguide Table
+// Since: 1.0.0
+//
+// Styleguide Base.Table
 //
 
 
 //
 // Borders
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `table--bordered` to add borders to your cells, rows and table.</div>
-// </div>
+// <blockquote>Add the class `table--bordered` to add borders to your cells, rows and table</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
@@ -45,7 +44,7 @@
 // </div>
 // <div class="responsive-table">
 //     <h4 class="section">With Borders</h4>
-//     <table class="table table--bordered table--selectable">
+//     <table class="table table--bordered">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -75,17 +74,14 @@
 //
 // Weight: 1
 //
-// Styleguide Table.Borders
+// Styleguide Base.Table.Borders
 //
 
 
 //
 // Striping
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">By default all rows are striped for better visibility. Add the class `table--nostripes` to remove row striping.</div>
-// </div>
+// <blockquote>By default all rows are striped for better visibility. Add the class `table--nostripes` to remove row striping</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
@@ -149,17 +145,14 @@
 //
 // Weight: 2
 //
-// Styleguide Table.Striping
+// Styleguide Base.Table.Striping
 //
 
 
 //
 // Selection
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `table--selectable` to enable row selection. Add the class `active` to the selected row.</div>
-// </div>
+// <blockquote>Add the class `table--selectable` to enable row selection. Add the class `active` to the selected row.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
@@ -193,17 +186,14 @@
 //
 // Weight: 3
 //
-// Styleguide Table.Selection
+// Styleguide Base.Table.Selection
 //
 
 
 //
 // Highlighting
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `table--highlight` to add a row hover effect. You can also add the class `sortable` to a column header to indicate active sort.</div>
-// </div>
+// <blockquote>Add the class `table--highlight` to add a row hover effect. You can also add the class `sortable` to a column header to indicate active sort</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
@@ -261,17 +251,14 @@
 //
 // Weight: 4
 //
-// Styleguide Table.Highlighting
+// Styleguide Base.Table.Highlighting
 //
 
 
 //
 // Hover
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `table--hover` to add a simple row hover effect.</div>
-// </div>
+// <blockquote>Add the class `table--hover` to add a simple row hover effect.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
@@ -329,17 +316,14 @@
 //
 // Weight: 5
 //
-// Styleguide Table.Hover
+// Styleguide Base.Table.Hover
 //
 
 
 //
 // Fixed
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `table--fixed` to change the table layout to fixed. A fixed table layout renders quicker than non-fixed but column widths are not determined by the data. By default tables are NOT fixed.</div>
-// </div>
+// <blockquote>Add the class `table--fixed` to change the table layout to fixed. A fixed table layout renders quicker than non-fixed but column widths are not determined by the data. By default tables are NOT fixed</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
@@ -373,17 +357,14 @@
 //
 // Weight: 6
 //
-// Styleguide Table.Fixed
+// Styleguide Base.Table.Fixed
 //
 
 
 //
 // Wrapped Text
 //
-// <div class="alert">
-//     <div class="alert__icon icon-info-outline"></div>
-//     <div class="alert__message">Add the class `table--wrap` to wrap text in the cells. By default, text is not wrapped.</div>
-// </div>
+// <blockquote>Add the class `table--wrap` to wrap text in the cells. By default, text is not wrapped</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
@@ -417,7 +398,7 @@
 //
 // Weight: 7
 //
-// Styleguide Table.Wrap
+// Styleguide Base.Table.Wrap
 //
 
 
@@ -515,20 +496,8 @@
 //
 // Weight: 8
 //
-// Styleguide Table.Padding
+// Styleguide Base.Table.Padding
 //
-
-@mixin table-compressed() {
-	th {
-		&:after {
-			display: none;
-		}
-	}
-	tr, td, th {
-		padding: $base-table-compressed-padding;
-		font-size: $base-table-compressed-font-size;
-	}
-}
 
 @mixin col-spotlight(
 	$column,
@@ -694,7 +663,16 @@
 		}
 	}
 	&--compressed {
-		@include table-compressed();
+		th {
+			&:after {
+				display: none;
+			}
+		}
+
+		tr, td, th {
+			padding: $base-table-compressed-padding;
+			font-size: $base-table-compressed-font-size;
+		}
 	}
 	&--fixed {
 		table-layout: fixed;
@@ -723,6 +701,7 @@
 		}
 		> tbody > tr:hover td:first-child {
 			@include row-active;
+			transition: $base-table-highlight-animation;
 		}
 	}
 	&--nohighlight {
@@ -733,23 +712,24 @@
 	&--hover {
 		> tbody > tr:hover {
 			background-color: $base-hover-color;
+			transition: $base-table-hover-animation;
 		}
 	}
 	&--selectable {
-		> tbody > tr > td {
-			border-bottom: 1px solid $white;
-		}
 	    > thead > th:first-child,
 		> tbody > tr > td:first-child {
 	        border-left: $base-table-active-row-border-width solid transparent;
+	        text-align: center;
 	    }
 		> tbody {
 			> tr {
+				transition: $base-table-selection-animation;
 				&:hover,
 				td:hover {
 					cursor: pointer;
 				}
 				&.active {
+					transition: $base-table-selection-animation;
 					background: rgba($base-accent-color, 0.2);
 				}
 			}
@@ -805,33 +785,6 @@
 				width: 100%;
 				margin: 0;
 				padding: 0;
-			}
-		}
-	}
-}
-
-// Global Modifiers
-
-&.cui--compressed .table {
-	@include table-compressed();
-}
-
-&.cui--animated .table.table--highlight {
-	> tbody > tr:hover td:first-child {
-		transition: $base-table-highlight-animation;
-	}
-}
-&.cui--animated .table.table--hover {
-	> tbody > tr:hover {
-		transition: $base-table-hover-animation;
-	}
-}
-&.cui--animated .table.table--selectable {
-	> tbody {
-		> tr {
-			transition: $base-table-selection-animation;
-			&:hover, &.active {
-				transition: $base-table-selection-animation;
 			}
 		}
 	}

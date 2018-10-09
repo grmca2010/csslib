@@ -1,6 +1,9 @@
 //
 // Link
 //
+// Since 1.0.0
+//
+// Styleguide Base.Link
 //
 
 
@@ -14,6 +17,7 @@
 //
 // Weight: 1
 //
+// Styleguide Base.Link.Color
 //
 
 
@@ -33,6 +37,7 @@
 //
 // Weight: 2
 //
+// Styleguide Base.Link.Inline
 //
 
 
@@ -50,36 +55,28 @@
 //
 // Weight: 3
 //
+// Styleguide Base.Link.Icons
 //
 
-a:not(.btn), .link {
+a,
+.link {
     @extend %link;
-
     color: $base-link-color;
-    font-weight: normal;
     background: transparent;
     text-decoration: none;
     border-radius: 0;
 
-    &:active {
-        color: $base-link-color-pressed;
-    }
-    &:focus,
-    &:hover {
-        color: $hover-link-color;
-    }
-    &:active,
     &:hover,
-    &:focus {
-        text-decoration: underline;
-    }
-    &:focus {
-        outline: none;
+    &:focus,
+    &:active {
+        color: $hover-link-color;
+        text-decoration: none;
     }
     &.link--ghost {
         color: $white;
         opacity: 0.75;
-
+    }
+    &.link--ghost {
         &:hover {
             opacity: 1;
         }

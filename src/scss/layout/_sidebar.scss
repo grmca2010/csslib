@@ -1,86 +1,38 @@
 //
-// Sidebar
+// Sidebar updated
 //
-// Styleguide Sidebar
+// Note: 3 Levels is the maximum depth we recommend and support<br>
+//
+// Since: 1.0.0
+//
+// Styleguide Layout.Sidebar
 //
 
 
 //
-// Spacing
+// Simple
+//
+// <blockquote>A simple sidebar consists of a `sidebar__header` and a list of `sidebar__item`<br>Add the class `sidebar__item--selected` to denote the item state is selected</blockquote>
 //
 // Markup:
-// <div class="row">
-//     <div class="col-md-6">
-//         <div class="sidebar">
-//             <div class="sidebar__header">
-//                 <div class="sidebar__header-title">Default</div>
-//             </div>
-//             <ul>
-//                 <li class="sidebar__item"><a>Dashboard</a></li>
-//                 <li class="sidebar__item"><a>Monitor</a></li>
-//                 <li class="sidebar__drawer">
-//                     <a>Configuration</a>
-//                     <ul>
-//                         <li class="sidebar__item"><a>Open Device Configuration</a></li>
-//                         <li class="sidebar__item"><a>Configuration Guides</a></li>
-//                     </ul>
-//                 </li>
-//                 <li class="sidebar__drawer">
-//                     <a>Inventory</a>
-//                     <ul>
-//                         <li class="sidebar__item"><a>Routers</a></li>
-//                         <li class="sidebar__item"><a>Switches</a></li>
-//                     </ul>
-//                 </li>
-//                 <li class="sidebar__drawer">
-//                     <a>Services</a>
-//                     <ul>
-//                         <li class="sidebar__item"><a>Network Services</a></li>
-//                         <li class="sidebar__item"><a>Mobility Services</a></li>
-//                     </ul>
-//                 </li>
-//                 <li class="sidebar__item"><a>Reports</a></li>
-//             </ul>
-//         </div>
+// <div class="sidebar">
+//     <div class="sidebar__header">
+//         <div class="sidebar__header-title">John Smith</div>
 //     </div>
-//     <div class="col-md-6">
-//         <div class="sidebar sidebar--compressed">
-//             <div class="sidebar__header">
-//                 <div class="sidebar__header-title">Compressed</div>
-//             </div>
-//             <ul>
-//                 <li class="sidebar__item"><a>Dashboard</a></li>
-//                 <li class="sidebar__item"><a>Monitor</a></li>
-//                 <li class="sidebar__drawer">
-//                     <a>Configuration</a>
-//                     <ul>
-//                         <li class="sidebar__item"><a>Open Device Configuration</a></li>
-//                         <li class="sidebar__item"><a>Configuration Guides</a></li>
-//                     </ul>
-//                 </li>
-//                 <li class="sidebar__drawer">
-//                     <a>Inventory</a>
-//                     <ul>
-//                         <li class="sidebar__item"><a>Routers</a></li>
-//                         <li class="sidebar__item"><a>Switches</a></li>
-//                     </ul>
-//                 </li>
-//                 <li class="sidebar__drawer">
-//                     <a>Services</a>
-//                     <ul>
-//                         <li class="sidebar__item"><a>Network Services</a></li>
-//                         <li class="sidebar__item"><a>Mobility Services</a></li>
-//                     </ul>
-//                 </li>
-//                 <li class="sidebar__item"><a>Reports</a></li>
-//             </ul>
-//         </div>
-//     </div>
+//     <ul>
+//         <li class="sidebar__item"><a>Conversations</a></li>
+//         <li class="sidebar__item"><a>Favorite Conversations</a></li>
+//         <li class="sidebar__item"><a>Contacts</a></li>
+//         <li class="sidebar__item"><a>Favorite Contacts</a></li>
+//         <li class="sidebar__item"><a>Settings</a></li>
+//         <li class="sidebar__item"><a>Feedback</a></li>
+//         <li class="sidebar__item"><a>Unlink Device</a></li>
+//     </ul>
 // </div>
 //
 // Weight: 1
 //
-// Styleguide Sidebar.Spacing
+// Styleguide Layout.Sidebar.Simple
 //
 
 
@@ -225,113 +177,217 @@
 //
 // Weight: 2
 //
-// Styleguide Sidebar.Color
+// Styleguide Layout.Sidebar.Color
 //
 
 
 //
-// Icons
+// Toolbar
+//
+// <blockquote>A sidebar can contain a `sidebar__toolbar` with a list of buttons</blockquote>
 //
 // Markup:
 // <div class="sidebar">
 //     <div class="sidebar__header">
-//         <div class="sidebar__header-title">Indigo</div>
+//         <div class="sidebar__header-title">Cisco Prime</div>
+//         <div class="sidebar__header-toolbar">
+//             <button class="btn btn--icon btn--primary">
+//                 <span class="icon-feedback"></span>
+//             </button>
+//             <button class="btn btn--icon btn--primary">
+//                 <span class="icon-star"></span>
+//             </button>
+//             <button class="btn btn--icon btn--primary">
+//                 <span class="icon-search"></span>
+//             </button>
+//         </div>
 //     </div>
 //     <ul>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-home"></span>
-//                 </span>Home</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-bell"></span>
-//                 <span>Alerts</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-graph"></span>
-//                 <span>Charts</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__drawer sidebar__drawer--opened">
-//             <a>
-//                 <span class="icon-devices"></span>
-//                 <span>Devices</span>
-//             </a>
-//             <ul>
-//                 <li class="sidebar__item"><a>Aironet 3500i Access Point</a></li>
-//                 <li class="sidebar__item"><a>Cisco Catalyst 3750-24TS</a></li>
-//                 <li class="sidebar__item"><a>Cisco 1841 ISR</a></li>
-//             </ul>
-//         </li>
+//         <li class="sidebar__item"><a>Dashboard</a></li>
+//         <li class="sidebar__item"><a>Monitor</a></li>
+//         <li class="sidebar__item"><a>Configuration</a></li>
 //     </ul>
 // </div>
 //
 // Weight: 3
 //
-// Styleguide Sidebar.Icons
+// Styleguide Layout.Sidebar.Toolbar
 //
 
-@mixin sidebar-color($background, $background-selected, $background-opened,
-    $background-hover, $color, $color-selected, $divider-color)
-{
-    background: $background;
-    color: $color;
+//
+// Drawers
+//
+// <blockquote>A sidebar can contain a `sidebar__drawer` which can contain sidebar items or other drawers<br>Add the class `sidebar__drawer--opened` to denote the state as opened</blockquote>
+//
+// Markup:
+// <div class="sidebar">
+//     <div class="sidebar__header">
+//         <div class="sidebar__header-title">Cisco Prime</div>
+//         <div class="sidebar__header-toolbar">
+//             <button class="btn btn--icon btn--primary">
+//                 <span class="icon-feedback"></span>
+//             </button>
+//             <button class="btn btn--icon btn--primary">
+//                 <span class="icon-star"></span>
+//             </button>
+//             <button class="btn btn--icon btn--primary">
+//                 <span class="icon-search"></span>
+//             </button>
+//         </div>
+//     </div>
+//     <ul>
+//         <li class="sidebar__item"><a>Dashboard</a></li>
+//         <li class="sidebar__item"><a>Monitor</a></li>
+//         <li class="sidebar__drawer">
+//             <a>Configuration</a>
+//             <ul>
+//                 <li class="sidebar__item"><a>Open Device Configuration</a></li>
+//                 <li class="sidebar__item"><a>Configuration Guides</a></li>
+//             </ul>
+//         </li>
+//         <li class="sidebar__drawer">
+//             <a>Inventory</a>
+//             <ul>
+//                 <li class="sidebar__item"><a>Routers</a></li>
+//                 <li class="sidebar__item"><a>Switches</a></li>
+//             </ul>
+//         </li>
+//         <li class="sidebar__drawer">
+//             <a>Services</a>
+//             <ul>
+//                 <li class="sidebar__item"><a>Network Services</a></li>
+//                 <li class="sidebar__item"><a>Mobility Services</a></li>
+//             </ul>
+//         </li>
+//         <li class="sidebar__item"><a>Reports</a></li>
+//     </ul>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Layout.Sidebar.Drawers
+//
 
-    a {
-        color: $color;
-    }
 
-    li {
-        &.sidebar__item--selected a,
-        &.selected a {
-            color: $color-selected;
-            box-shadow: $sidebar-item-border-selected;
-            background-color: $background-selected;
-
-            > span[class^="icon-"] {
-                opacity: 1;
-            }
-        }
-        a:hover,
-        a:visited,
-        a:active,
-        a:focus {
-            text-decoration: none;
-            background-color: $background-hover;
-            color: $color;
-
-            > span[class^="icon-"] {
-                opacity: 1;
-            }
-        }
-    }
-
-    > ul li.sidebar__drawer > a:after {
-        color: $color; // Colorize chevrons
-    }
-
-    > ul li.sidebar__drawer:hover > a:after {
-        color: $color-selected; // Colorize chevrons on hover
-    }
-
-    > ul > li {
-        box-shadow: 0 1px 0 $divider-color inset; // divider lines
-    }
-
-    li.sidebar__drawer.sidebar__drawer--opened {
-        background-color: $background-opened;
-
-        a:hover {
-            box-shadow: $sidebar-item-border-selected;
-        }
-    }
-}
+//
+// Example
+//
+// <blockquote>A sidebar item can contain an action which is right justified. <br>Add the class `sidebar__item-action` to a sidebar item to align the action properly<br>Add the class `sidebar--hidden` to hide the sidebar completely<br></blockquote>
+//
+// Markup:
+// <div class="sidebar">
+//     <div class="sidebar__header">
+//         <div class="sidebar__header-title">CLI Analyzer</div>
+//     </div>
+//     <ul class="sidebar__drawer">
+//         <li class="sidebar__item">
+//             <a>
+//                 <span class="icon-devices"></span>
+//                 <span class="qtr-margin-left">Dashboard</span>
+//             </a>
+//         </li>
+//         <li class="sidebar__item sidebar__item--selected">
+//             <a>
+//                 <span class="icon-plus"></span>
+//                 <span class="qtr-margin-left">New Session</span>
+//             </a>
+//         </li>
+//         <li class="sidebar__item">
+//             <a>
+//                 <span class="icon-diagnostics"></span>
+//                 <span class="qtr-margin-left">File Analysis</span>
+//             </a>
+//         </li>
+//         <li class="sidebar__item">
+//             <a>
+//                 <span class="icon-cog"></span>
+//                 <span class="qtr-margin-left">Settings</span>
+//             </a>
+//         </li>
+//     </ul>
+//     <ul>
+//         <li class="sidebar__drawer sidebar__drawer--opened">
+//             <a>Current Sessions</a>
+//             <ul>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-circle text-success"></span>
+//                         <span class="qtr-margin-left">172.18.194.56</span>
+//                         <div class="sidebar__item-action">
+//                             <span class="icon-close"></span>
+//                         </div>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-circle text-danger"></span>
+//                         <span class="qtr-margin-left">svn-sj-2960</span>
+//                         <div class="sidebar__item-action">
+//                             <span class="icon-close"></span>
+//                         </div>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-circle text-success"></span>
+//                         <span class="qtr-margin-left">172.18.194.59</span>
+//                         <div class="sidebar__item-action">
+//                             <span class="icon-close"></span>
+//                         </div>
+//                     </a>
+//                 </li>
+//            </ul>
+//         </li>
+//     </ul>
+//     <ul>
+//         <li class="sidebar__drawer sidebar__drawer--opened">
+//             <a>Recent Sessions</a>
+//             <ul>
+//                 <li class="sidebar__item">
+//                     <a>172.18.194.56</a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>svn-sj-2960</a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>172.18.194.59</a>
+//                 </li>
+//             </ul>
+//         </li>
+//     </ul>
+//     <ul>
+//         <li class="sidebar__item">
+//             <a>
+//                 <span class="icon-contact"></span>
+//                 <span class="qtr-margin-left">Logged in as kbroich</span>
+//             </a>
+//         </li>
+//         <li class="sidebar__item">
+//             <a>
+//                 <span class="icon-feedback"></span>
+//                 <span class="qtr-margin-left">Feedback</span>
+//             </a>
+//         </li>
+//         <li class="sidebar__item">
+//             <a>
+//                 <span class="icon-help"></span>
+//                 <span class="qtr-margin-left">Help</span>
+//             </a>
+//         </li>
+//     </ul>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Layout.Sidebar.Example
+//
 
 $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
+
+.standalone .show-menu .content-body,
+.styleguide .show-menu .content-fluid {
+    padding-left: $mobile-menu-width;
+}
 
 .content-fluid,
 .content-body {
@@ -384,6 +440,7 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     }
 }
 
+.apollo-sidebar, // Deprecated. Use sidebar instead
 .sidebar {
     display: block;
     position: absolute;
@@ -404,22 +461,11 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
         transform: translate3d(0,0,0);
     }
 
+    @include sidebar-color();
+
     @each $sidebar-obj in $sidebar-colors {
-        @if map-get($sidebar-obj, name) == "default" {
+        &--#{map-get($sidebar-obj, name)} {
             @include sidebar-color(map-get($sidebar-obj, params)...);
-        } @else {
-            &--#{map-get($sidebar-obj, name)} {
-                @include sidebar-color(map-get($sidebar-obj, params)...);
-            }
-        }
-    }
-
-    &__header {
-        padding: $base-spacing * 0.75;
-        text-align: center;
-
-        a:hover {
-            box-shadow: none;
         }
     }
 
@@ -435,12 +481,10 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     }
 
     li {
-        &.sidebar__item {
-            @include text-ellipsis;
-        }
         &.sidebar__item--selected a,
         &.selected a,
         a:hover {
+            box-shadow: $sidebar-item-border-selected;
             text-decoration: none;
         }
     }
@@ -450,30 +494,14 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
         align-items: center;
         height: $sidebar-item-height;
         padding: 0 $base-spacing;
-        user-select: none;
-
-        > span[class^="icon-"] {
-            opacity: 0.75;
-            margin-right: $base-spacing-half;
-        }
+        line-height: $sidebar-item-height;
+        font-weight: normal;
     }
 
-    &--compressed {
-        .sidebar__header {
-            padding: $base-spacing-half;
-        }
-        a {
-            height: $sidebar-item-height-compressed;
-        }
-        ul li ul > li > a {
-            font-size: 12px;
-        }
-    }
-
-    ul {
+    > ul {
         @include clearfix;
 
-        li {
+        > li {
             &.sidebar__drawer,
             &.sidebar-drawer {
                 &:hover {
@@ -486,10 +514,11 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
 
                 > a {
                     &:after {
-                        @include drawer-closed;
-                        opacity: 0.5;
+                        @include icon-chevron-right;
                         position: absolute;
                         right: 14px;
+                        font-size: $base-font-size;
+                        opacity: 0.5;
                     }
                 }
 
@@ -500,7 +529,7 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
                 &--opened {
                     > a {
                         &:after {
-                            @include drawer-opened;
+                            @include icon-chevron-down;
                             opacity: 1;
                         }
                     }
@@ -512,11 +541,14 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
             }
 
             ul > li > a {
+                font-size: 12px;
+                font-weight: bold;
                 padding-left: $base-spacing * 2;
             }
 
             // NOTE: 3 levels deep is the max we style
             ul > li > ul > li > a {
+                font-weight: normal;
                 padding-left: $base-spacing * 3;
             }
         }
@@ -553,10 +585,19 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     }
 }
 
+.sidebar__header,
+.sidebar-header {
+    padding: $base-spacing * 0.75;
+    text-align: center;
+
+    a:hover {
+        box-shadow: none;
+    }
+}
+
 .sidebar__header-title,
 .sidebar-header__title {
     font-size: $sidebar-title-font-size;
-    font-weight: $sidebar-title-font-weight;
     line-height: 1;
 }
 
@@ -637,25 +678,5 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
         color: rgba(white, .80);
         font-size: 10px;
         display: block;
-    }
-}
-
-// Global Modifiers
-
-&.cui--compressed .sidebar .sidebar__header {
-    padding: $base-spacing-half;
-}
-&.cui--compressed .sidebar ul > li a {
-    height: $sidebar-item-height-compressed;
-}
-&.cui--compressed .sidebar ul li ul > li > a {
-    font-size: 12px;
-}
-
-&.cui--animated .sidebar ul > li.sidebar__drawer a {
-    transition: all .2s linear;
-
-    &:hover::after {
-        transition: all .2s;
     }
 }
